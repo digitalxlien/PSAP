@@ -32,7 +32,7 @@ Partial Class frmBuscarCuenta
         Me.numeroInt = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fechaDeAlta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ultimaFechaPagada = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cmdRegresar = New System.Windows.Forms.Button()
+        Me.cmdCancelar = New System.Windows.Forms.Button()
         Me.cmdSeleccionar = New System.Windows.Forms.Button()
         CType(Me.dgCuentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -116,20 +116,21 @@ Partial Class frmBuscarCuenta
         Me.ultimaFechaPagada.ReadOnly = True
         Me.ultimaFechaPagada.Width = 150
         '
-        'cmdRegresar
+        'cmdCancelar
         '
-        Me.cmdRegresar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.cmdRegresar.Image = Global.PSAP.My.Resources.Resources._return
-        Me.cmdRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdRegresar.Location = New System.Drawing.Point(765, 406)
-        Me.cmdRegresar.Name = "cmdRegresar"
-        Me.cmdRegresar.Size = New System.Drawing.Size(120, 35)
-        Me.cmdRegresar.TabIndex = 146
-        Me.cmdRegresar.Text = "Regresar"
-        Me.cmdRegresar.UseVisualStyleBackColor = True
+        Me.cmdCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.cmdCancelar.Image = Global.PSAP.My.Resources.Resources._return
+        Me.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdCancelar.Location = New System.Drawing.Point(765, 406)
+        Me.cmdCancelar.Name = "cmdCancelar"
+        Me.cmdCancelar.Size = New System.Drawing.Size(120, 35)
+        Me.cmdCancelar.TabIndex = 146
+        Me.cmdCancelar.Text = "Cancelar"
+        Me.cmdCancelar.UseVisualStyleBackColor = True
         '
         'cmdSeleccionar
         '
+        Me.cmdSeleccionar.Enabled = False
         Me.cmdSeleccionar.Image = Global.PSAP.My.Resources.Resources.add
         Me.cmdSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.cmdSeleccionar.Location = New System.Drawing.Point(624, 406)
@@ -143,10 +144,10 @@ Partial Class frmBuscarCuenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.cmdRegresar
+        Me.CancelButton = Me.cmdCancelar
         Me.ClientSize = New System.Drawing.Size(897, 453)
         Me.ControlBox = False
-        Me.Controls.Add(Me.cmdRegresar)
+        Me.Controls.Add(Me.cmdCancelar)
         Me.Controls.Add(Me.cmdSeleccionar)
         Me.Controls.Add(Me.dgCuentas)
         Me.Controls.Add(Me.txtNombre)
@@ -169,6 +170,6 @@ Partial Class frmBuscarCuenta
     Friend WithEvents numeroInt As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents fechaDeAlta As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ultimaFechaPagada As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cmdRegresar As System.Windows.Forms.Button
+    Friend WithEvents cmdCancelar As System.Windows.Forms.Button
     Friend WithEvents cmdSeleccionar As System.Windows.Forms.Button
 End Class

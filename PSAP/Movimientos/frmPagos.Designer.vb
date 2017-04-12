@@ -27,15 +27,15 @@ Partial Class frmPagos
         Me.txtFecha = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gboxCuenta = New System.Windows.Forms.GroupBox()
-        Me.cmdSalir = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtFechaAlta = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.cmdSalir = New System.Windows.Forms.Button()
+        Me.txtUltimoPeriodoPagado = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtDomicilio = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.txtExistencia = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtidCuenta = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblExistencia = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -83,86 +83,83 @@ Partial Class frmPagos
         '
         'gboxCuenta
         '
-        Me.gboxCuenta.Controls.Add(Me.cmdSalir)
-        Me.gboxCuenta.Controls.Add(Me.TextBox4)
-        Me.gboxCuenta.Controls.Add(Me.Label5)
-        Me.gboxCuenta.Controls.Add(Me.TextBox3)
-        Me.gboxCuenta.Controls.Add(Me.TextBox2)
+        Me.gboxCuenta.Controls.Add(Me.txtFechaAlta)
         Me.gboxCuenta.Controls.Add(Me.Label4)
+        Me.gboxCuenta.Controls.Add(Me.cmdSalir)
+        Me.gboxCuenta.Controls.Add(Me.txtUltimoPeriodoPagado)
+        Me.gboxCuenta.Controls.Add(Me.Label5)
+        Me.gboxCuenta.Controls.Add(Me.txtDomicilio)
         Me.gboxCuenta.Controls.Add(Me.Label3)
-        Me.gboxCuenta.Controls.Add(Me.TextBox1)
-        Me.gboxCuenta.Controls.Add(Me.txtExistencia)
+        Me.gboxCuenta.Controls.Add(Me.txtNombre)
+        Me.gboxCuenta.Controls.Add(Me.txtidCuenta)
         Me.gboxCuenta.Controls.Add(Me.Label2)
         Me.gboxCuenta.Controls.Add(Me.lblExistencia)
         Me.gboxCuenta.Location = New System.Drawing.Point(12, 86)
         Me.gboxCuenta.Name = "gboxCuenta"
-        Me.gboxCuenta.Size = New System.Drawing.Size(426, 256)
+        Me.gboxCuenta.Size = New System.Drawing.Size(426, 257)
         Me.gboxCuenta.TabIndex = 63
         Me.gboxCuenta.TabStop = False
+        '
+        'txtFechaAlta
+        '
+        Me.txtFechaAlta.Font = New System.Drawing.Font("Arial", 12.0!)
+        Me.txtFechaAlta.Location = New System.Drawing.Point(152, 137)
+        Me.txtFechaAlta.MaxLength = 49
+        Me.txtFechaAlta.Name = "txtFechaAlta"
+        Me.txtFechaAlta.ReadOnly = True
+        Me.txtFechaAlta.Size = New System.Drawing.Size(258, 26)
+        Me.txtFechaAlta.TabIndex = 142
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(19, 141)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(129, 22)
+        Me.Label4.TabIndex = 143
+        Me.Label4.Text = "Fecha de alta:"
         '
         'cmdSalir
         '
         Me.cmdSalir.Image = Global.PSAP.My.Resources.Resources._return
         Me.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdSalir.Location = New System.Drawing.Point(248, 203)
+        Me.cmdSalir.Location = New System.Drawing.Point(248, 216)
         Me.cmdSalir.Name = "cmdSalir"
         Me.cmdSalir.Size = New System.Drawing.Size(162, 35)
         Me.cmdSalir.TabIndex = 141
         Me.cmdSalir.Text = "Buscar cuenta"
         Me.cmdSalir.UseVisualStyleBackColor = True
         '
-        'TextBox4
+        'txtUltimoPeriodoPagado
         '
-        Me.TextBox4.Enabled = False
-        Me.TextBox4.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(200, 166)
-        Me.TextBox4.MaxLength = 49
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(210, 26)
-        Me.TextBox4.TabIndex = 64
+        Me.txtUltimoPeriodoPagado.Font = New System.Drawing.Font("Arial", 12.0!)
+        Me.txtUltimoPeriodoPagado.Location = New System.Drawing.Point(200, 178)
+        Me.txtUltimoPeriodoPagado.MaxLength = 49
+        Me.txtUltimoPeriodoPagado.Name = "txtUltimoPeriodoPagado"
+        Me.txtUltimoPeriodoPagado.ReadOnly = True
+        Me.txtUltimoPeriodoPagado.Size = New System.Drawing.Size(210, 26)
+        Me.txtUltimoPeriodoPagado.TabIndex = 64
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(20, 170)
+        Me.Label5.Location = New System.Drawing.Point(20, 182)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(172, 18)
         Me.Label5.TabIndex = 65
         Me.Label5.Text = "Ultimo periodo pagado:"
         '
-        'TextBox3
+        'txtDomicilio
         '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(152, 131)
-        Me.TextBox3.MaxLength = 49
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(258, 26)
-        Me.TextBox3.TabIndex = 64
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(152, 93)
-        Me.TextBox2.MaxLength = 49
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(258, 26)
-        Me.TextBox2.TabIndex = 66
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(19, 137)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(89, 22)
-        Me.Label4.TabIndex = 65
-        Me.Label4.Text = "Telefono:"
+        Me.txtDomicilio.Font = New System.Drawing.Font("Arial", 12.0!)
+        Me.txtDomicilio.Location = New System.Drawing.Point(152, 93)
+        Me.txtDomicilio.MaxLength = 49
+        Me.txtDomicilio.Name = "txtDomicilio"
+        Me.txtDomicilio.ReadOnly = True
+        Me.txtDomicilio.Size = New System.Drawing.Size(258, 26)
+        Me.txtDomicilio.TabIndex = 66
         '
         'Label3
         '
@@ -174,27 +171,25 @@ Partial Class frmPagos
         Me.Label3.TabIndex = 67
         Me.Label3.Text = "Domicilio:"
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(152, 58)
-        Me.TextBox1.MaxLength = 49
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(258, 26)
-        Me.TextBox1.TabIndex = 64
+        Me.txtNombre.Font = New System.Drawing.Font("Arial", 12.0!)
+        Me.txtNombre.Location = New System.Drawing.Point(152, 58)
+        Me.txtNombre.MaxLength = 49
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.ReadOnly = True
+        Me.txtNombre.Size = New System.Drawing.Size(258, 26)
+        Me.txtNombre.TabIndex = 64
         '
-        'txtExistencia
+        'txtidCuenta
         '
-        Me.txtExistencia.Enabled = False
-        Me.txtExistencia.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.txtExistencia.Location = New System.Drawing.Point(152, 22)
-        Me.txtExistencia.MaxLength = 49
-        Me.txtExistencia.Name = "txtExistencia"
-        Me.txtExistencia.ReadOnly = True
-        Me.txtExistencia.Size = New System.Drawing.Size(155, 26)
-        Me.txtExistencia.TabIndex = 61
+        Me.txtidCuenta.Font = New System.Drawing.Font("Arial", 12.0!)
+        Me.txtidCuenta.Location = New System.Drawing.Point(152, 22)
+        Me.txtidCuenta.MaxLength = 49
+        Me.txtidCuenta.Name = "txtidCuenta"
+        Me.txtidCuenta.ReadOnly = True
+        Me.txtidCuenta.Size = New System.Drawing.Size(155, 26)
+        Me.txtidCuenta.TabIndex = 61
         '
         'Label2
         '
@@ -264,17 +259,17 @@ Partial Class frmPagos
     Friend WithEvents txtFecha As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents gboxCuenta As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents txtUltimoPeriodoPagado As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txtDomicilio As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents txtExistencia As System.Windows.Forms.TextBox
+    Friend WithEvents txtNombre As System.Windows.Forms.TextBox
+    Friend WithEvents txtidCuenta As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents lblExistencia As System.Windows.Forms.Label
     Friend WithEvents cmdSalir As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents txtFechaAlta As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

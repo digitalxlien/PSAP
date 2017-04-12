@@ -30,15 +30,34 @@ Public Class frmBuscarCuenta
         lector.Close()
 
 
+        If dgCuentas.Rows.Count > 0 Then
+            cmdSeleccionar.Enabled = True
+        Else
+            cmdSeleccionar.Enabled = False
+        End If
+
     End Sub
 
-    Private Sub cmdRegresar_Click(sender As Object, e As EventArgs) Handles cmdRegresar.Click
+    Private Sub cmdRegresar_Click(sender As Object, e As EventArgs) Handles cmdCancelar.Click
         conexion.Close()
         Me.Dispose()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
+    
+    Private Sub cmdSeleccionar_Click(sender As Object, e As EventArgs) Handles cmdSeleccionar.Click
 
+        frmPagos.txtidCuenta.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(0).Value
+        frmPagos.txtNombre.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(1).Value
+        frmPagos.txtDomicilio.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(2).Value & ", #" & dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(3).Value & ", Int. " & dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(4).Value
+        frmPagos.txtUltimoPeriodoPagado.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(6).Value
+        frmPagos.txtFechaAlta.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(5).Value
+
+
+
+
+        'frmPagos.txtTelefono.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(1).Value
+
+        Me.Dispose()
 
     End Sub
 End Class

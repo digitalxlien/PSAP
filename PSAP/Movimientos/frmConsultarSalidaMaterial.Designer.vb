@@ -30,6 +30,7 @@ Partial Class frmConsultarSalidaMaterial
         Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.concepto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gboxConsulta = New System.Windows.Forms.GroupBox()
+        Me.txtIdSalida = New System.Windows.Forms.TextBox()
         Me.rbtnIdSalida = New System.Windows.Forms.RadioButton()
         Me.cboxConsultaEmpleado = New System.Windows.Forms.ComboBox()
         Me.dtpConsultaFechaFin = New System.Windows.Forms.DateTimePicker()
@@ -44,7 +45,6 @@ Partial Class frmConsultarSalidaMaterial
         Me.rbtnCalle = New System.Windows.Forms.RadioButton()
         Me.rbtnFecha = New System.Windows.Forms.RadioButton()
         Me.cmdSalir = New System.Windows.Forms.Button()
-        Me.txtIdSalida = New System.Windows.Forms.TextBox()
         CType(Me.dgSalidaMaterial, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gboxConsulta.SuspendLayout()
         Me.SuspendLayout()
@@ -119,6 +119,15 @@ Partial Class frmConsultarSalidaMaterial
         Me.gboxConsulta.TabIndex = 92
         Me.gboxConsulta.TabStop = False
         Me.gboxConsulta.Text = "Consulta"
+        '
+        'txtIdSalida
+        '
+        Me.txtIdSalida.Enabled = False
+        Me.txtIdSalida.Font = New System.Drawing.Font("Arial", 12.0!)
+        Me.txtIdSalida.Location = New System.Drawing.Point(492, 12)
+        Me.txtIdSalida.Name = "txtIdSalida"
+        Me.txtIdSalida.Size = New System.Drawing.Size(195, 26)
+        Me.txtIdSalida.TabIndex = 98
         '
         'rbtnIdSalida
         '
@@ -257,15 +266,6 @@ Partial Class frmConsultarSalidaMaterial
         Me.cmdSalir.TabIndex = 140
         Me.cmdSalir.Text = "Salir"
         Me.cmdSalir.UseVisualStyleBackColor = True
-        '
-        'txtIdSalida
-        '
-        Me.txtIdSalida.Enabled = False
-        Me.txtIdSalida.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.txtIdSalida.Location = New System.Drawing.Point(492, 12)
-        Me.txtIdSalida.Name = "txtIdSalida"
-        Me.txtIdSalida.Size = New System.Drawing.Size(195, 26)
-        Me.txtIdSalida.TabIndex = 98
         '
         'frmConsultarSalidaMaterial
         '
