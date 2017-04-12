@@ -47,6 +47,7 @@ Partial Class frmInicio
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mniRegistrarSalidas = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniConsultarSalidas = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniPagos = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -148,7 +149,7 @@ Partial Class frmInicio
         '
         'mniMovimientos
         '
-        Me.mniMovimientos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniActividadPozos, Me.mniGastosRealizados, Me.mniMovimientoMateriales})
+        Me.mniMovimientos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniActividadPozos, Me.mniGastosRealizados, Me.mniMovimientoMateriales, Me.mniPagos})
         Me.mniMovimientos.Name = "mniMovimientos"
         Me.mniMovimientos.Size = New System.Drawing.Size(89, 20)
         Me.mniMovimientos.Text = "Movimientos"
@@ -201,6 +202,12 @@ Partial Class frmInicio
         Me.mniConsultarSalidas.Size = New System.Drawing.Size(176, 22)
         Me.mniConsultarSalidas.Text = "Consultar Salidas"
         '
+        'mniPagos
+        '
+        Me.mniPagos.Name = "mniPagos"
+        Me.mniPagos.Size = New System.Drawing.Size(174, 22)
+        Me.mniPagos.Text = "Pagos"
+        '
         'frmInicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -244,4 +251,5 @@ Partial Class frmInicio
     Friend WithEvents mniRegistrarSalidas As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mniConsultarSalidas As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents mniPagos As System.Windows.Forms.ToolStripMenuItem
 End Class

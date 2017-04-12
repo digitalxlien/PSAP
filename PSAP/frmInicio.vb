@@ -74,4 +74,8 @@
     Private Sub mniConsultarSalidas_Click(sender As Object, e As EventArgs) Handles mniConsultarSalidas.Click
         frmConsultarSalidaMaterial.ShowDialog()
     End Sub
+
+    Private Sub mniPagos_Click(sender As Object, e As EventArgs) Handles mniPagos.Click
+        frmPagos.ShowDialog()
+    End Sub
 End Class
