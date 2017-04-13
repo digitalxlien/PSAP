@@ -120,6 +120,12 @@
     <Compile Include="Movimientos\frmBuscarCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Movimientos\frmCargarPagoAgua.Designer.vb">
+      <DependentUpon>frmCargarPagoAgua.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\frmCargarPagoAgua.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Movimientos\frmConsultarEntradaMaterial.Designer.vb">
       <DependentUpon>frmConsultarEntradaMaterial.vb</DependentUpon>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\frmBuscarCuenta.resx">
       <DependentUpon>frmBuscarCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\frmCargarPagoAgua.resx">
+      <DependentUpon>frmCargarPagoAgua.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\frmConsultarEntradaMaterial.resx">
       <DependentUpon>frmConsultarEntradaMaterial.vb</DependentUpon>
