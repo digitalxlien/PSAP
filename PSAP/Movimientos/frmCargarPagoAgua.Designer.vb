@@ -41,7 +41,9 @@ Partial Class frmCargarPagoAgua
         Me.txtInfra = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cmdSalir = New System.Windows.Forms.Button()
-        Me.cmdNuevo = New System.Windows.Forms.Button()
+        Me.cmdAceptar = New System.Windows.Forms.Button()
+        Me.lblDescuentoProntoPago = New System.Windows.Forms.Label()
+        Me.txtDescuentoPagoPuntual = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'cboxSituacion
@@ -69,11 +71,12 @@ Partial Class frmCargarPagoAgua
         'txtDescuento
         '
         Me.txtDescuento.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescuento.Location = New System.Drawing.Point(521, 12)
+        Me.txtDescuento.Location = New System.Drawing.Point(378, 38)
         Me.txtDescuento.Name = "txtDescuento"
         Me.txtDescuento.ReadOnly = True
         Me.txtDescuento.Size = New System.Drawing.Size(140, 26)
         Me.txtDescuento.TabIndex = 61
+        Me.txtDescuento.Text = "0"
         '
         'lblidEmpleado
         '
@@ -81,9 +84,9 @@ Partial Class frmCargarPagoAgua
         Me.lblidEmpleado.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblidEmpleado.Location = New System.Drawing.Point(374, 13)
         Me.lblidEmpleado.Name = "lblidEmpleado"
-        Me.lblidEmpleado.Size = New System.Drawing.Size(141, 22)
+        Me.lblidEmpleado.Size = New System.Drawing.Size(205, 22)
         Me.lblidEmpleado.TabIndex = 60
-        Me.lblidEmpleado.Text = "Descuento (%):"
+        Me.lblidEmpleado.Text = "Desc. de situacion (%):"
         '
         'cboxTarifa
         '
@@ -92,7 +95,7 @@ Partial Class frmCargarPagoAgua
         Me.cboxTarifa.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cboxTarifa.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.cboxTarifa.FormattingEnabled = True
-        Me.cboxTarifa.Location = New System.Drawing.Point(120, 67)
+        Me.cboxTarifa.Location = New System.Drawing.Point(120, 119)
         Me.cboxTarifa.Name = "cboxTarifa"
         Me.cboxTarifa.Size = New System.Drawing.Size(230, 26)
         Me.cboxTarifa.TabIndex = 62
@@ -101,7 +104,7 @@ Partial Class frmCargarPagoAgua
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 71)
+        Me.Label1.Location = New System.Drawing.Point(12, 123)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(49, 22)
         Me.Label1.TabIndex = 63
@@ -111,11 +114,12 @@ Partial Class frmCargarPagoAgua
         '
         Me.cboxMesInicial.DisplayMember = "nombre"
         Me.cboxMesInicial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboxMesInicial.Enabled = False
         Me.cboxMesInicial.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cboxMesInicial.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.cboxMesInicial.FormattingEnabled = True
         Me.cboxMesInicial.Items.AddRange(New Object() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"})
-        Me.cboxMesInicial.Location = New System.Drawing.Point(120, 106)
+        Me.cboxMesInicial.Location = New System.Drawing.Point(120, 158)
         Me.cboxMesInicial.Name = "cboxMesInicial"
         Me.cboxMesInicial.Size = New System.Drawing.Size(230, 26)
         Me.cboxMesInicial.TabIndex = 64
@@ -124,7 +128,7 @@ Partial Class frmCargarPagoAgua
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 106)
+        Me.Label2.Location = New System.Drawing.Point(12, 158)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(102, 22)
         Me.Label2.TabIndex = 65
@@ -134,11 +138,12 @@ Partial Class frmCargarPagoAgua
         '
         Me.cboxMesFinal.DisplayMember = "nombre"
         Me.cboxMesFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboxMesFinal.Enabled = False
         Me.cboxMesFinal.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cboxMesFinal.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.cboxMesFinal.FormattingEnabled = True
         Me.cboxMesFinal.Items.AddRange(New Object() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"})
-        Me.cboxMesFinal.Location = New System.Drawing.Point(120, 142)
+        Me.cboxMesFinal.Location = New System.Drawing.Point(120, 194)
         Me.cboxMesFinal.Name = "cboxMesFinal"
         Me.cboxMesFinal.Size = New System.Drawing.Size(230, 26)
         Me.cboxMesFinal.TabIndex = 66
@@ -147,7 +152,7 @@ Partial Class frmCargarPagoAgua
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 142)
+        Me.Label3.Location = New System.Drawing.Point(12, 194)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(90, 22)
         Me.Label3.TabIndex = 67
@@ -156,17 +161,18 @@ Partial Class frmCargarPagoAgua
         'txtCuotaFija
         '
         Me.txtCuotaFija.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCuotaFija.Location = New System.Drawing.Point(125, 212)
+        Me.txtCuotaFija.Location = New System.Drawing.Point(125, 267)
         Me.txtCuotaFija.Name = "txtCuotaFija"
         Me.txtCuotaFija.ReadOnly = True
         Me.txtCuotaFija.Size = New System.Drawing.Size(162, 26)
         Me.txtCuotaFija.TabIndex = 69
+        Me.txtCuotaFija.Text = "0"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(12, 213)
+        Me.Label4.Location = New System.Drawing.Point(12, 268)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(100, 22)
         Me.Label4.TabIndex = 68
@@ -175,17 +181,18 @@ Partial Class frmCargarPagoAgua
         'txtRecargos
         '
         Me.txtRecargos.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRecargos.Location = New System.Drawing.Point(487, 216)
+        Me.txtRecargos.Location = New System.Drawing.Point(487, 271)
         Me.txtRecargos.Name = "txtRecargos"
         Me.txtRecargos.ReadOnly = True
         Me.txtRecargos.Size = New System.Drawing.Size(174, 26)
         Me.txtRecargos.TabIndex = 71
+        Me.txtRecargos.Text = "0"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(383, 216)
+        Me.Label5.Location = New System.Drawing.Point(383, 271)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(98, 22)
         Me.Label5.TabIndex = 70
@@ -194,17 +201,18 @@ Partial Class frmCargarPagoAgua
         'txtTar
         '
         Me.txtTar.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTar.Location = New System.Drawing.Point(125, 245)
+        Me.txtTar.Location = New System.Drawing.Point(125, 300)
         Me.txtTar.Name = "txtTar"
         Me.txtTar.ReadOnly = True
         Me.txtTar.Size = New System.Drawing.Size(162, 26)
         Me.txtTar.TabIndex = 73
+        Me.txtTar.Text = "0"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(12, 246)
+        Me.Label6.Location = New System.Drawing.Point(12, 301)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 22)
         Me.Label6.TabIndex = 72
@@ -213,17 +221,18 @@ Partial Class frmCargarPagoAgua
         'txtInfra
         '
         Me.txtInfra.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInfra.Location = New System.Drawing.Point(487, 245)
+        Me.txtInfra.Location = New System.Drawing.Point(487, 300)
         Me.txtInfra.Name = "txtInfra"
         Me.txtInfra.ReadOnly = True
         Me.txtInfra.Size = New System.Drawing.Size(174, 26)
         Me.txtInfra.TabIndex = 75
+        Me.txtInfra.Text = "0"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(345, 248)
+        Me.Label7.Location = New System.Drawing.Point(345, 303)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(136, 22)
         Me.Label7.TabIndex = 74
@@ -231,33 +240,60 @@ Partial Class frmCargarPagoAgua
         '
         'cmdSalir
         '
+        Me.cmdSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cmdSalir.Image = Global.PSAP.My.Resources.Resources._return
         Me.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdSalir.Location = New System.Drawing.Point(543, 302)
+        Me.cmdSalir.Location = New System.Drawing.Point(543, 357)
         Me.cmdSalir.Name = "cmdSalir"
         Me.cmdSalir.Size = New System.Drawing.Size(120, 35)
         Me.cmdSalir.TabIndex = 77
         Me.cmdSalir.Text = "Regresar"
         Me.cmdSalir.UseVisualStyleBackColor = True
         '
-        'cmdNuevo
+        'cmdAceptar
         '
-        Me.cmdNuevo.Image = Global.PSAP.My.Resources.Resources.add
-        Me.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdNuevo.Location = New System.Drawing.Point(417, 302)
-        Me.cmdNuevo.Name = "cmdNuevo"
-        Me.cmdNuevo.Size = New System.Drawing.Size(120, 35)
-        Me.cmdNuevo.TabIndex = 76
-        Me.cmdNuevo.Text = "Aceptar"
-        Me.cmdNuevo.UseVisualStyleBackColor = True
+        Me.cmdAceptar.Enabled = False
+        Me.cmdAceptar.Image = Global.PSAP.My.Resources.Resources.add
+        Me.cmdAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdAceptar.Location = New System.Drawing.Point(417, 357)
+        Me.cmdAceptar.Name = "cmdAceptar"
+        Me.cmdAceptar.Size = New System.Drawing.Size(120, 35)
+        Me.cmdAceptar.TabIndex = 76
+        Me.cmdAceptar.Text = "Aceptar"
+        Me.cmdAceptar.UseVisualStyleBackColor = True
+        '
+        'lblDescuentoProntoPago
+        '
+        Me.lblDescuentoProntoPago.AutoSize = True
+        Me.lblDescuentoProntoPago.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescuentoProntoPago.ForeColor = System.Drawing.Color.Black
+        Me.lblDescuentoProntoPago.Location = New System.Drawing.Point(374, 119)
+        Me.lblDescuentoProntoPago.Name = "lblDescuentoProntoPago"
+        Me.lblDescuentoProntoPago.Size = New System.Drawing.Size(245, 22)
+        Me.lblDescuentoProntoPago.TabIndex = 78
+        Me.lblDescuentoProntoPago.Text = "Desc. por pago puntual (%):"
+        '
+        'txtDescuentoPagoPuntual
+        '
+        Me.txtDescuentoPagoPuntual.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescuentoPagoPuntual.Location = New System.Drawing.Point(378, 144)
+        Me.txtDescuentoPagoPuntual.Name = "txtDescuentoPagoPuntual"
+        Me.txtDescuentoPagoPuntual.ReadOnly = True
+        Me.txtDescuentoPagoPuntual.Size = New System.Drawing.Size(140, 26)
+        Me.txtDescuentoPagoPuntual.TabIndex = 79
+        Me.txtDescuentoPagoPuntual.Text = "0"
         '
         'frmCargarPagoAgua
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(673, 349)
+        Me.CancelButton = Me.cmdSalir
+        Me.ClientSize = New System.Drawing.Size(673, 404)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.txtDescuentoPagoPuntual)
+        Me.Controls.Add(Me.lblDescuentoProntoPago)
         Me.Controls.Add(Me.cmdSalir)
-        Me.Controls.Add(Me.cmdNuevo)
+        Me.Controls.Add(Me.cmdAceptar)
         Me.Controls.Add(Me.txtInfra)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtTar)
@@ -302,5 +338,7 @@ Partial Class frmCargarPagoAgua
     Friend WithEvents txtInfra As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents cmdSalir As System.Windows.Forms.Button
-    Friend WithEvents cmdNuevo As System.Windows.Forms.Button
+    Friend WithEvents cmdAceptar As System.Windows.Forms.Button
+    Friend WithEvents lblDescuentoProntoPago As System.Windows.Forms.Label
+    Friend WithEvents txtDescuentoPagoPuntual As System.Windows.Forms.TextBox
 End Class

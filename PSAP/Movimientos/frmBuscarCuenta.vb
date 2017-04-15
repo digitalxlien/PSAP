@@ -38,12 +38,6 @@ Public Class frmBuscarCuenta
 
     End Sub
 
-    Private Sub cmdRegresar_Click(sender As Object, e As EventArgs) Handles cmdCancelar.Click
-        conexion.Close()
-        Me.Dispose()
-    End Sub
-
-    
     Private Sub cmdSeleccionar_Click(sender As Object, e As EventArgs) Handles cmdSeleccionar.Click
 
         frmPagos.txtidCuenta.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(0).Value
@@ -60,4 +54,12 @@ Public Class frmBuscarCuenta
         Me.Dispose()
 
     End Sub
+
+
+    Private Sub cmdRegresar_Click(sender As Object, e As EventArgs) Handles cmdCancelar.Click
+        conexion.Close()
+        Me.Dispose()
+    End Sub
+
+
 End Class
