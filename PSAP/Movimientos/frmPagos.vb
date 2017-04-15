@@ -1,12 +1,12 @@
 ﻿Public Class frmPagos
 
 
-    Private Sub cmdSalir_Click(sender As Object, e As EventArgs) Handles cmdSalir.Click
+    Private Sub cmdSalir_Click(sender As Object, e As EventArgs) Handles cmdBuscarCuenta.Click
         frmBuscarCuenta.ShowDialog()
     End Sub
 
     
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles cmdCargarPagoAgua.Click
         frmCargarPagoAgua.ShowDialog()
     End Sub
 
@@ -35,4 +35,19 @@
 
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles cmdCargarPagoServicios.Click
+        frmCargarPagoServicio.ShowDialog()
+    End Sub
+
+    Private Sub frmPagos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub cmdSalir_Click_1(sender As Object, e As EventArgs) Handles cmdSalir.Click
+        Me.Dispose()
+    End Sub
+
+    Private Sub txtTotal_TextChanged(sender As Object, e As EventArgs) Handles txtTotal.TextChanged
+        cmdGrabar.Enabled = True
+    End Sub
 End Class

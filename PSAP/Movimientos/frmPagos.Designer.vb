@@ -30,7 +30,7 @@ Partial Class frmPagos
         Me.gboxCuenta = New System.Windows.Forms.GroupBox()
         Me.txtFechaAlta = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.cmdSalir = New System.Windows.Forms.Button()
+        Me.cmdBuscarCuenta = New System.Windows.Forms.Button()
         Me.txtUltimoPeriodoPagado = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtDomicilio = New System.Windows.Forms.TextBox()
@@ -40,16 +40,6 @@ Partial Class frmPagos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblExistencia = New System.Windows.Forms.Label()
         Me.dgAgua = New System.Windows.Forms.DataGridView()
-        Me.dgServicios = New System.Windows.Forms.DataGridView()
-        Me.servicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.empleado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Total = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.anio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.mesInicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.mesFin = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -60,6 +50,18 @@ Partial Class frmPagos
         Me.situacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.importe = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgServicios = New System.Windows.Forms.DataGridView()
+        Me.servicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.empleado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Total = New System.Windows.Forms.Label()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.cmdCargarPagoServicios = New System.Windows.Forms.Button()
+        Me.cmdCargarPagoAgua = New System.Windows.Forms.Button()
+        Me.cmdSalir = New System.Windows.Forms.Button()
+        Me.cmdGrabar = New System.Windows.Forms.Button()
         Me.gboxCuenta.SuspendLayout()
         CType(Me.dgAgua, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,7 +109,7 @@ Partial Class frmPagos
         '
         Me.gboxCuenta.Controls.Add(Me.txtFechaAlta)
         Me.gboxCuenta.Controls.Add(Me.Label4)
-        Me.gboxCuenta.Controls.Add(Me.cmdSalir)
+        Me.gboxCuenta.Controls.Add(Me.cmdBuscarCuenta)
         Me.gboxCuenta.Controls.Add(Me.txtUltimoPeriodoPagado)
         Me.gboxCuenta.Controls.Add(Me.Label5)
         Me.gboxCuenta.Controls.Add(Me.txtDomicilio)
@@ -142,16 +144,16 @@ Partial Class frmPagos
         Me.Label4.TabIndex = 143
         Me.Label4.Text = "Fecha de alta:"
         '
-        'cmdSalir
+        'cmdBuscarCuenta
         '
-        Me.cmdSalir.Image = CType(resources.GetObject("cmdSalir.Image"), System.Drawing.Image)
-        Me.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdSalir.Location = New System.Drawing.Point(248, 216)
-        Me.cmdSalir.Name = "cmdSalir"
-        Me.cmdSalir.Size = New System.Drawing.Size(162, 35)
-        Me.cmdSalir.TabIndex = 141
-        Me.cmdSalir.Text = "Buscar cuenta"
-        Me.cmdSalir.UseVisualStyleBackColor = True
+        Me.cmdBuscarCuenta.Image = CType(resources.GetObject("cmdBuscarCuenta.Image"), System.Drawing.Image)
+        Me.cmdBuscarCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdBuscarCuenta.Location = New System.Drawing.Point(248, 216)
+        Me.cmdBuscarCuenta.Name = "cmdBuscarCuenta"
+        Me.cmdBuscarCuenta.Size = New System.Drawing.Size(162, 35)
+        Me.cmdBuscarCuenta.TabIndex = 141
+        Me.cmdBuscarCuenta.Text = "Buscar cuenta"
+        Me.cmdBuscarCuenta.UseVisualStyleBackColor = True
         '
         'txtUltimoPeriodoPagado
         '
@@ -245,100 +247,6 @@ Partial Class frmPagos
         Me.dgAgua.Size = New System.Drawing.Size(772, 150)
         Me.dgAgua.TabIndex = 143
         '
-        'dgServicios
-        '
-        Me.dgServicios.AllowUserToAddRows = False
-        Me.dgServicios.AllowUserToDeleteRows = False
-        Me.dgServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.servicio, Me.empleado, Me.precio})
-        Me.dgServicios.Location = New System.Drawing.Point(457, 246)
-        Me.dgServicios.Name = "dgServicios"
-        Me.dgServicios.ReadOnly = True
-        Me.dgServicios.Size = New System.Drawing.Size(772, 150)
-        Me.dgServicios.TabIndex = 144
-        '
-        'servicio
-        '
-        Me.servicio.HeaderText = "Servicio"
-        Me.servicio.Name = "servicio"
-        Me.servicio.ReadOnly = True
-        Me.servicio.Width = 325
-        '
-        'empleado
-        '
-        Me.empleado.HeaderText = "Empleado"
-        Me.empleado.Name = "empleado"
-        Me.empleado.ReadOnly = True
-        Me.empleado.Width = 300
-        '
-        'precio
-        '
-        Me.precio.HeaderText = "Precio"
-        Me.precio.Name = "precio"
-        Me.precio.ReadOnly = True
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(453, 22)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(226, 22)
-        Me.Label6.TabIndex = 145
-        Me.Label6.Text = "Detalle del pago de agua:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(453, 221)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(260, 22)
-        Me.Label7.TabIndex = 146
-        Me.Label7.Text = "Detalle del pago de servicios:"
-        '
-        'Total
-        '
-        Me.Total.AutoSize = True
-        Me.Total.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Total.Location = New System.Drawing.Point(983, 416)
-        Me.Total.Name = "Total"
-        Me.Total.Size = New System.Drawing.Size(71, 22)
-        Me.Total.TabIndex = 147
-        Me.Total.Text = "Total $:"
-        '
-        'Button2
-        '
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(16, 412)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(422, 35)
-        Me.Button2.TabIndex = 142
-        Me.Button2.Text = "Cargar pago de servicio"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(16, 361)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(422, 35)
-        Me.Button1.TabIndex = 141
-        Me.Button1.Text = "Cargar pago de agua"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'txtTotal
-        '
-        Me.txtTotal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotal.Location = New System.Drawing.Point(1066, 412)
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(163, 26)
-        Me.txtTotal.TabIndex = 148
-        Me.txtTotal.Text = "0"
-        '
         'anio
         '
         Me.anio.HeaderText = "Año"
@@ -408,19 +316,142 @@ Partial Class frmPagos
         Me.importe.Name = "importe"
         Me.importe.ReadOnly = True
         '
+        'dgServicios
+        '
+        Me.dgServicios.AllowUserToAddRows = False
+        Me.dgServicios.AllowUserToDeleteRows = False
+        Me.dgServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.servicio, Me.empleado, Me.precio})
+        Me.dgServicios.Location = New System.Drawing.Point(457, 246)
+        Me.dgServicios.Name = "dgServicios"
+        Me.dgServicios.ReadOnly = True
+        Me.dgServicios.Size = New System.Drawing.Size(772, 150)
+        Me.dgServicios.TabIndex = 144
+        '
+        'servicio
+        '
+        Me.servicio.HeaderText = "Servicio"
+        Me.servicio.Name = "servicio"
+        Me.servicio.ReadOnly = True
+        Me.servicio.Width = 325
+        '
+        'empleado
+        '
+        Me.empleado.HeaderText = "Empleado"
+        Me.empleado.Name = "empleado"
+        Me.empleado.ReadOnly = True
+        Me.empleado.Width = 300
+        '
+        'precio
+        '
+        Me.precio.HeaderText = "Precio"
+        Me.precio.Name = "precio"
+        Me.precio.ReadOnly = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(453, 22)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(226, 22)
+        Me.Label6.TabIndex = 145
+        Me.Label6.Text = "Detalle del pago de agua:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(453, 221)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(260, 22)
+        Me.Label7.TabIndex = 146
+        Me.Label7.Text = "Detalle del pago de servicios:"
+        '
+        'Total
+        '
+        Me.Total.AutoSize = True
+        Me.Total.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Total.Location = New System.Drawing.Point(975, 416)
+        Me.Total.Name = "Total"
+        Me.Total.Size = New System.Drawing.Size(71, 22)
+        Me.Total.TabIndex = 147
+        Me.Total.Text = "Total $:"
+        '
+        'txtTotal
+        '
+        Me.txtTotal.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotal.ForeColor = System.Drawing.Color.Black
+        Me.txtTotal.Location = New System.Drawing.Point(1070, 412)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.ReadOnly = True
+        Me.txtTotal.Size = New System.Drawing.Size(159, 32)
+        Me.txtTotal.TabIndex = 148
+        Me.txtTotal.Text = "0"
+        Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'cmdCargarPagoServicios
+        '
+        Me.cmdCargarPagoServicios.Image = CType(resources.GetObject("cmdCargarPagoServicios.Image"), System.Drawing.Image)
+        Me.cmdCargarPagoServicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdCargarPagoServicios.Location = New System.Drawing.Point(16, 412)
+        Me.cmdCargarPagoServicios.Name = "cmdCargarPagoServicios"
+        Me.cmdCargarPagoServicios.Size = New System.Drawing.Size(422, 35)
+        Me.cmdCargarPagoServicios.TabIndex = 142
+        Me.cmdCargarPagoServicios.Text = "Cargar pago de servicio"
+        Me.cmdCargarPagoServicios.UseVisualStyleBackColor = True
+        '
+        'cmdCargarPagoAgua
+        '
+        Me.cmdCargarPagoAgua.Image = CType(resources.GetObject("cmdCargarPagoAgua.Image"), System.Drawing.Image)
+        Me.cmdCargarPagoAgua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdCargarPagoAgua.Location = New System.Drawing.Point(16, 361)
+        Me.cmdCargarPagoAgua.Name = "cmdCargarPagoAgua"
+        Me.cmdCargarPagoAgua.Size = New System.Drawing.Size(422, 35)
+        Me.cmdCargarPagoAgua.TabIndex = 141
+        Me.cmdCargarPagoAgua.Text = "Cargar pago de agua"
+        Me.cmdCargarPagoAgua.UseVisualStyleBackColor = True
+        '
+        'cmdSalir
+        '
+        Me.cmdSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.cmdSalir.Image = Global.PSAP.My.Resources.Resources._return
+        Me.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdSalir.Location = New System.Drawing.Point(1109, 459)
+        Me.cmdSalir.Name = "cmdSalir"
+        Me.cmdSalir.Size = New System.Drawing.Size(120, 35)
+        Me.cmdSalir.TabIndex = 149
+        Me.cmdSalir.Text = "Salir"
+        Me.cmdSalir.UseVisualStyleBackColor = True
+        '
+        'cmdGrabar
+        '
+        Me.cmdGrabar.Enabled = False
+        Me.cmdGrabar.Image = Global.PSAP.My.Resources.Resources.save
+        Me.cmdGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdGrabar.Location = New System.Drawing.Point(979, 459)
+        Me.cmdGrabar.Name = "cmdGrabar"
+        Me.cmdGrabar.Size = New System.Drawing.Size(120, 35)
+        Me.cmdGrabar.TabIndex = 150
+        Me.cmdGrabar.Text = "Grabar"
+        Me.cmdGrabar.UseVisualStyleBackColor = True
+        '
         'frmPagos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1242, 506)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.cmdGrabar)
+        Me.Controls.Add(Me.cmdSalir)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Total)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.dgServicios)
         Me.Controls.Add(Me.dgAgua)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cmdCargarPagoServicios)
+        Me.Controls.Add(Me.cmdCargarPagoAgua)
         Me.Controls.Add(Me.gboxCuenta)
         Me.Controls.Add(Me.txtFecha)
         Me.Controls.Add(Me.Label1)
@@ -450,9 +481,9 @@ Partial Class frmPagos
     Friend WithEvents txtidCuenta As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents lblExistencia As System.Windows.Forms.Label
-    Friend WithEvents cmdSalir As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents cmdBuscarCuenta As System.Windows.Forms.Button
+    Friend WithEvents cmdCargarPagoAgua As System.Windows.Forms.Button
+    Friend WithEvents cmdCargarPagoServicios As System.Windows.Forms.Button
     Friend WithEvents txtFechaAlta As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents dgAgua As System.Windows.Forms.DataGridView
@@ -474,4 +505,6 @@ Partial Class frmPagos
     Friend WithEvents situacion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents importe As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cmdSalir As System.Windows.Forms.Button
+    Friend WithEvents cmdGrabar As System.Windows.Forms.Button
 End Class

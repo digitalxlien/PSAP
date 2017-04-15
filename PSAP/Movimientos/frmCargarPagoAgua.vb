@@ -253,10 +253,13 @@ Public Class frmCargarPagoAgua
         frmPagos.dgAgua.Rows.Add(cboxTarifa.Text, cboxMesInicial.Text, cboxMesFinal.Text, txtCuotaFija.Text, txtRecargos.Text, txtTar.Text, txtInfra.Text, cboxSituacion.Text, descuento, importe)
         conexion.Close()
         lector.Close()
-        Me.Dispose()
 
 
         frmPagos.CalcularTotal()
+
+
+        Me.Dispose()
+
 
 
     End Sub
