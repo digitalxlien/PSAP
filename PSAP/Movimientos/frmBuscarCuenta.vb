@@ -7,6 +7,7 @@ Public Class frmBuscarCuenta
     Dim cmd As New SqlCommand
     Dim lector As SqlDataReader
     Dim sql As String
+    Dim meses() As String = New String() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}
 
     Private Sub frmBuscarCuenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.Open()
@@ -25,7 +26,11 @@ Public Class frmBuscarCuenta
         lector = cmd.ExecuteReader
 
         While lector.Read
-            dgCuentas.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6).ToString & " - " & lector(7).ToString)
+            If lector(6).ToString = "" Then
+                dgCuentas.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6).ToString & " - " & lector(7).ToString)
+            Else
+                dgCuentas.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), meses(lector(6) - 1) & " - " & lector(7).ToString)
+            End If
         End While
         lector.Close()
 
@@ -44,11 +49,11 @@ Public Class frmBuscarCuenta
         frmPagos.txtNombre.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(1).Value
         frmPagos.txtDomicilio.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(2).Value & ", #" & dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(3).Value & ", Int. " & dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(4).Value
         frmPagos.txtUltimoPeriodoPagado.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(6).Value
-        frmPagos.txtFechaAlta.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(5).Value
+        frmPagos.txtFechaAlta.Text = CDate(dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(5).Value).ToLongDateString
 
 
 
-
+        frmPagos.validarGuardar()
         'frmPagos.txtTelefono.Text = dgCuentas.Rows.Item(dgCuentas.CurrentCell.RowIndex).Cells(1).Value
 
         Me.Dispose()

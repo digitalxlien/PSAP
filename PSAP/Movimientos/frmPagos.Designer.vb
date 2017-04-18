@@ -32,7 +32,6 @@ Partial Class frmPagos
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cmdBuscarCuenta = New System.Windows.Forms.Button()
         Me.txtUltimoPeriodoPagado = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtDomicilio = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -62,9 +61,15 @@ Partial Class frmPagos
         Me.cmdCargarPagoAgua = New System.Windows.Forms.Button()
         Me.cmdSalir = New System.Windows.Forms.Button()
         Me.cmdGrabar = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtOtros = New System.Windows.Forms.NumericUpDown()
+        Me.cmdImprimir = New System.Windows.Forms.Button()
+        Me.cmdNuevo = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.gboxCuenta.SuspendLayout()
         CType(Me.dgAgua, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtOtros, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtidPago
@@ -73,7 +78,7 @@ Partial Class frmPagos
         Me.txtidPago.Location = New System.Drawing.Point(130, 18)
         Me.txtidPago.Name = "txtidPago"
         Me.txtidPago.ReadOnly = True
-        Me.txtidPago.Size = New System.Drawing.Size(163, 26)
+        Me.txtidPago.Size = New System.Drawing.Size(308, 26)
         Me.txtidPago.TabIndex = 59
         '
         'lblIDMaterial
@@ -89,10 +94,10 @@ Partial Class frmPagos
         'txtFecha
         '
         Me.txtFecha.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFecha.Location = New System.Drawing.Point(130, 54)
+        Me.txtFecha.Location = New System.Drawing.Point(86, 54)
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.ReadOnly = True
-        Me.txtFecha.Size = New System.Drawing.Size(163, 26)
+        Me.txtFecha.Size = New System.Drawing.Size(352, 26)
         Me.txtFecha.TabIndex = 61
         '
         'Label1
@@ -107,11 +112,11 @@ Partial Class frmPagos
         '
         'gboxCuenta
         '
+        Me.gboxCuenta.Controls.Add(Me.Label5)
         Me.gboxCuenta.Controls.Add(Me.txtFechaAlta)
         Me.gboxCuenta.Controls.Add(Me.Label4)
         Me.gboxCuenta.Controls.Add(Me.cmdBuscarCuenta)
         Me.gboxCuenta.Controls.Add(Me.txtUltimoPeriodoPagado)
-        Me.gboxCuenta.Controls.Add(Me.Label5)
         Me.gboxCuenta.Controls.Add(Me.txtDomicilio)
         Me.gboxCuenta.Controls.Add(Me.Label3)
         Me.gboxCuenta.Controls.Add(Me.txtNombre)
@@ -164,16 +169,6 @@ Partial Class frmPagos
         Me.txtUltimoPeriodoPagado.ReadOnly = True
         Me.txtUltimoPeriodoPagado.Size = New System.Drawing.Size(210, 26)
         Me.txtUltimoPeriodoPagado.TabIndex = 64
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(20, 182)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(172, 18)
-        Me.Label5.TabIndex = 65
-        Me.Label5.Text = "Ultimo periodo pagado:"
         '
         'txtDomicilio
         '
@@ -436,12 +431,71 @@ Partial Class frmPagos
         Me.cmdGrabar.Text = "Grabar"
         Me.cmdGrabar.UseVisualStyleBackColor = True
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(453, 416)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(62, 22)
+        Me.Label8.TabIndex = 151
+        Me.Label8.Text = "Otros:"
+        '
+        'txtOtros
+        '
+        Me.txtOtros.DecimalPlaces = 2
+        Me.txtOtros.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOtros.Location = New System.Drawing.Point(521, 416)
+        Me.txtOtros.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.txtOtros.Name = "txtOtros"
+        Me.txtOtros.Size = New System.Drawing.Size(120, 26)
+        Me.txtOtros.TabIndex = 152
+        Me.txtOtros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'cmdImprimir
+        '
+        Me.cmdImprimir.Enabled = False
+        Me.cmdImprimir.Image = Global.PSAP.My.Resources.Resources.save
+        Me.cmdImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdImprimir.Location = New System.Drawing.Point(853, 459)
+        Me.cmdImprimir.Name = "cmdImprimir"
+        Me.cmdImprimir.Size = New System.Drawing.Size(120, 35)
+        Me.cmdImprimir.TabIndex = 153
+        Me.cmdImprimir.Text = "Imprimir"
+        Me.cmdImprimir.UseVisualStyleBackColor = True
+        '
+        'cmdNuevo
+        '
+        Me.cmdNuevo.Enabled = False
+        Me.cmdNuevo.Image = Global.PSAP.My.Resources.Resources.add
+        Me.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdNuevo.Location = New System.Drawing.Point(727, 459)
+        Me.cmdNuevo.Name = "cmdNuevo"
+        Me.cmdNuevo.Size = New System.Drawing.Size(120, 35)
+        Me.cmdNuevo.TabIndex = 154
+        Me.cmdNuevo.Text = "Nuevo"
+        Me.cmdNuevo.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(19, 180)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(179, 22)
+        Me.Label5.TabIndex = 144
+        Me.Label5.Text = "Último mes pagado:"
+        '
         'frmPagos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1242, 506)
         Me.ControlBox = False
+        Me.Controls.Add(Me.cmdNuevo)
+        Me.Controls.Add(Me.cmdImprimir)
+        Me.Controls.Add(Me.txtOtros)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.cmdGrabar)
         Me.Controls.Add(Me.cmdSalir)
         Me.Controls.Add(Me.txtTotal)
@@ -464,6 +518,7 @@ Partial Class frmPagos
         Me.gboxCuenta.PerformLayout()
         CType(Me.dgAgua, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtOtros, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -474,7 +529,6 @@ Partial Class frmPagos
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents gboxCuenta As System.Windows.Forms.GroupBox
     Friend WithEvents txtUltimoPeriodoPagado As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtDomicilio As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
@@ -507,4 +561,9 @@ Partial Class frmPagos
     Friend WithEvents importe As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cmdSalir As System.Windows.Forms.Button
     Friend WithEvents cmdGrabar As System.Windows.Forms.Button
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtOtros As System.Windows.Forms.NumericUpDown
+    Friend WithEvents cmdImprimir As System.Windows.Forms.Button
+    Friend WithEvents cmdNuevo As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

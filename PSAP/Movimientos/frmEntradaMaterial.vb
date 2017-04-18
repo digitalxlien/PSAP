@@ -194,7 +194,7 @@ Public Class frmEntradaMaterial
 
     Function getTelefonoProveedor(ByVal nombre As String) As String
         Dim aux As String
-        Dim sql = String.Format("SELECT telefono FROM Proveedor WHERE nombre = '{0}'", nombre)
+        Dim sql As String = String.Format("SELECT telefono FROM Proveedor WHERE nombre = '{0}'", nombre)
         Dim lector As SqlDataReader
         Dim cmd As New SqlCommand(sql, conexion)
         lector = cmd.ExecuteReader
