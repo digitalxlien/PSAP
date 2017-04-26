@@ -48,6 +48,8 @@ Partial Class frmInicio
         Me.mniRegistrarSalidas = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniConsultarSalidas = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniPagos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniRegistrarPago = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniConsultarPagos = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -204,9 +206,22 @@ Partial Class frmInicio
         '
         'mniPagos
         '
+        Me.mniPagos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniRegistrarPago, Me.mniConsultarPagos})
         Me.mniPagos.Name = "mniPagos"
         Me.mniPagos.Size = New System.Drawing.Size(174, 22)
         Me.mniPagos.Text = "Pagos"
+        '
+        'mniRegistrarPago
+        '
+        Me.mniRegistrarPago.Name = "mniRegistrarPago"
+        Me.mniRegistrarPago.Size = New System.Drawing.Size(160, 22)
+        Me.mniRegistrarPago.Text = "Registrar Pago"
+        '
+        'mniConsultarPagos
+        '
+        Me.mniConsultarPagos.Name = "mniConsultarPagos"
+        Me.mniConsultarPagos.Size = New System.Drawing.Size(160, 22)
+        Me.mniConsultarPagos.Text = "Consultar Pagos"
         '
         'frmInicio
         '
@@ -252,4 +267,6 @@ Partial Class frmInicio
     Friend WithEvents mniConsultarSalidas As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents mniPagos As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniRegistrarPago As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniConsultarPagos As System.Windows.Forms.ToolStripMenuItem
 End Class

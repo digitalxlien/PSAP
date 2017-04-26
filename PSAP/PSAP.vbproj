@@ -83,6 +83,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPSAP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Movimientos\frmConsultarDetallePagos.Designer.vb">
+      <DependentUpon>frmConsultarDetallePagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\frmConsultarDetallePagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\frmConsultarPago.Designer.vb">
+      <DependentUpon>frmConsultarPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\frmConsultarPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Movimientos\frmActividadPozos.Designer.vb">
       <DependentUpon>frmActividadPozos.vb</DependentUpon>
     </Compile>
@@ -247,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\frmMateriales.resx">
       <DependentUpon>frmMateriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\frmConsultarDetallePagos.resx">
+      <DependentUpon>frmConsultarDetallePagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\frmConsultarPago.resx">
+      <DependentUpon>frmConsultarPago.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\frmActividadPozos.resx">
       <DependentUpon>frmActividadPozos.vb</DependentUpon>

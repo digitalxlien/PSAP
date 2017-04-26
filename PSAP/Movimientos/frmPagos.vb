@@ -26,7 +26,20 @@ Public Class frmPagos
         Dim sql As String
         Dim mayor As Integer
 
-        tipo = 1
+        '1 = Pago de agua
+        '2 = Pago de servicio
+        '3 = Ambos
+
+        Select Case True
+            Case dgAgua.Rows.Count > 0 And dgServicios.Rows.Count = 0
+                tipo = 1
+            Case dgServicios.Rows.Count > 0 And dgAgua.Rows.Count = 0
+                tipo = 2
+            Case Else
+                tipo = 3
+        End Select
+
+
         sql = String.Format("INSERT INTO Pago (idCuenta, fecha, tipo, otros, total) " &
                             " VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');", _
                             txtidCuenta.Text, System.DateTime.Today.ToShortDateString, tipo, txtOtros.Value, txtTotal.Text)
@@ -74,7 +87,7 @@ Public Class frmPagos
 
             cmd.CommandText = sql
             cmd.ExecuteNonQuery()
-            MessageBox.Show("Mayor: " & mayor)
+            'MessageBox.Show("Mayor: " & mayor)
 
         End If
 
@@ -98,22 +111,15 @@ Public Class frmPagos
         MessageBox.Show("Se ha guardado la información del pago correctamente", "Pago Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         cmdGrabar.Enabled = False
-
+        cmdBuscarCuenta.Enabled = False
         cmdImprimir.Enabled = True
         cmdNuevo.Enabled = True
+
+        cmdCargarPagoAgua.Enabled = False
+        cmdCargarPagoServicios.Enabled = False
+        txtOtros.Enabled = False
     End Sub
 
-
-
-    Function getNumeroMes(ByVal mes As String) As Integer
-        Dim meses() As String = New String() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}
-        For x = 0 To meses.Length
-            If mes = meses(x) Then
-                Return x + 1
-            End If
-        Next
-        Return -1
-    End Function
 
 
     Function getIdServicio(ByVal descripcion As String) As Integer
@@ -252,9 +258,27 @@ Public Class frmPagos
 
         cmdImprimir.Enabled = False
         cmdGrabar.Enabled = False
-
+        cmdBuscarCuenta.Enabled = True
         cmdNuevo.Enabled = False
 
-
+        cmdCargarPagoAgua.Enabled = True
+        cmdCargarPagoServicios.Enabled = True
+        txtOtros.Enabled = True
     End Sub
+
+
+
+
+
+    Function getNumeroMes(ByVal mes As String) As Integer
+        Dim meses() As String = New String() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}
+        For x = 0 To meses.Length
+            If mes = meses(x) Then
+                Return x + 1
+            End If
+        Next
+        Return -1
+    End Function
+
+
 End Class

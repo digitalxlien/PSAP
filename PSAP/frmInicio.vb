@@ -75,7 +75,11 @@
         frmConsultarSalidaMaterial.ShowDialog()
     End Sub
 
-    Private Sub mniPagos_Click(sender As Object, e As EventArgs) Handles mniPagos.Click
+    Private Sub mniRegistrarPago_Click(sender As Object, e As EventArgs) Handles mniRegistrarPago.Click
         frmPagos.ShowDialog()
+    End Sub
+
+    Private Sub mniConsultarPagos_Click(sender As Object, e As EventArgs) Handles mniConsultarPagos.Click
+        frmConsultarPago.ShowDialog()
     End Sub
 End Class

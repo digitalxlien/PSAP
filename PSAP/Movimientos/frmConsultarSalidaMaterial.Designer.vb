@@ -113,7 +113,7 @@ Partial Class frmConsultarSalidaMaterial
         Me.gboxConsulta.Controls.Add(Me.rbtnEmpleado)
         Me.gboxConsulta.Controls.Add(Me.rbtnCalle)
         Me.gboxConsulta.Controls.Add(Me.rbtnFecha)
-        Me.gboxConsulta.Location = New System.Drawing.Point(19, 11)
+        Me.gboxConsulta.Location = New System.Drawing.Point(19, 12)
         Me.gboxConsulta.Name = "gboxConsulta"
         Me.gboxConsulta.Size = New System.Drawing.Size(871, 107)
         Me.gboxConsulta.TabIndex = 92

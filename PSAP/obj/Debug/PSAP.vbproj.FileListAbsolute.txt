@@ -72,3 +72,5 @@ C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potabl
 C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potable - PSAP\PSAP\PSAP\obj\Debug\PSAP.frmPagos.resources
 C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potable - PSAP\PSAP\PSAP\obj\Debug\PSAP.frmCargarPagoAgua.resources
 C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potable - PSAP\PSAP\PSAP\obj\Debug\PSAP.frmCargarPagoServicio.resources
+C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potable - PSAP\PSAP\PSAP\obj\Debug\PSAP.frmConsultarPago.resources
+C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potable - PSAP\PSAP\PSAP\obj\Debug\PSAP.frmConsultarDetallePagos.resources
