@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmActiidadPozos
+Partial Class frmActividadPozos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -35,10 +35,6 @@ Partial Class frmActiidadPozos
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
         Me.dgActividadPozos = New System.Windows.Forms.DataGridView()
-        Me.cmdSalir = New System.Windows.Forms.Button()
-        Me.cmdGrabar = New System.Windows.Forms.Button()
-        Me.cmdNuevo = New System.Windows.Forms.Button()
-        Me.dtpHora = New System.Windows.Forms.DateTimePicker()
         Me.idActividadPozo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.idPozo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ubicacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -46,6 +42,10 @@ Partial Class frmActiidadPozos
         Me.hora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lectura = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.observaciones = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cmdSalir = New System.Windows.Forms.Button()
+        Me.cmdGrabar = New System.Windows.Forms.Button()
+        Me.cmdNuevo = New System.Windows.Forms.Button()
+        Me.dtpHora = New System.Windows.Forms.DateTimePicker()
         CType(Me.dgActividadPozos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -174,50 +174,6 @@ Partial Class frmActiidadPozos
         Me.dgActividadPozos.Size = New System.Drawing.Size(774, 280)
         Me.dgActividadPozos.TabIndex = 60
         '
-        'cmdSalir
-        '
-        Me.cmdSalir.Image = Global.PSAP.My.Resources.Resources._return
-        Me.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdSalir.Location = New System.Drawing.Point(675, 479)
-        Me.cmdSalir.Name = "cmdSalir"
-        Me.cmdSalir.Size = New System.Drawing.Size(120, 35)
-        Me.cmdSalir.TabIndex = 63
-        Me.cmdSalir.Text = "Salir"
-        Me.cmdSalir.UseVisualStyleBackColor = True
-        '
-        'cmdGrabar
-        '
-        Me.cmdGrabar.Enabled = False
-        Me.cmdGrabar.Image = Global.PSAP.My.Resources.Resources.save
-        Me.cmdGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdGrabar.Location = New System.Drawing.Point(549, 479)
-        Me.cmdGrabar.Name = "cmdGrabar"
-        Me.cmdGrabar.Size = New System.Drawing.Size(120, 35)
-        Me.cmdGrabar.TabIndex = 62
-        Me.cmdGrabar.Text = "Grabar"
-        Me.cmdGrabar.UseVisualStyleBackColor = True
-        '
-        'cmdNuevo
-        '
-        Me.cmdNuevo.Image = Global.PSAP.My.Resources.Resources.add
-        Me.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdNuevo.Location = New System.Drawing.Point(423, 479)
-        Me.cmdNuevo.Name = "cmdNuevo"
-        Me.cmdNuevo.Size = New System.Drawing.Size(120, 35)
-        Me.cmdNuevo.TabIndex = 61
-        Me.cmdNuevo.Text = "Nuevo"
-        Me.cmdNuevo.UseVisualStyleBackColor = True
-        '
-        'dtpHora
-        '
-        Me.dtpHora.Enabled = False
-        Me.dtpHora.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpHora.Location = New System.Drawing.Point(90, 132)
-        Me.dtpHora.Name = "dtpHora"
-        Me.dtpHora.Size = New System.Drawing.Size(268, 26)
-        Me.dtpHora.TabIndex = 64
-        '
         'idActividadPozo
         '
         Me.idActividadPozo.HeaderText = "ID Actividad del Pozo"
@@ -263,7 +219,51 @@ Partial Class frmActiidadPozos
         Me.observaciones.Name = "observaciones"
         Me.observaciones.ReadOnly = True
         '
-        'frmActiidadPozos
+        'cmdSalir
+        '
+        Me.cmdSalir.Image = Global.PSAP.My.Resources.Resources._return
+        Me.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdSalir.Location = New System.Drawing.Point(675, 479)
+        Me.cmdSalir.Name = "cmdSalir"
+        Me.cmdSalir.Size = New System.Drawing.Size(120, 35)
+        Me.cmdSalir.TabIndex = 63
+        Me.cmdSalir.Text = "Salir"
+        Me.cmdSalir.UseVisualStyleBackColor = True
+        '
+        'cmdGrabar
+        '
+        Me.cmdGrabar.Enabled = False
+        Me.cmdGrabar.Image = Global.PSAP.My.Resources.Resources.save
+        Me.cmdGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdGrabar.Location = New System.Drawing.Point(549, 479)
+        Me.cmdGrabar.Name = "cmdGrabar"
+        Me.cmdGrabar.Size = New System.Drawing.Size(120, 35)
+        Me.cmdGrabar.TabIndex = 62
+        Me.cmdGrabar.Text = "Grabar"
+        Me.cmdGrabar.UseVisualStyleBackColor = True
+        '
+        'cmdNuevo
+        '
+        Me.cmdNuevo.Image = Global.PSAP.My.Resources.Resources.add
+        Me.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdNuevo.Location = New System.Drawing.Point(423, 479)
+        Me.cmdNuevo.Name = "cmdNuevo"
+        Me.cmdNuevo.Size = New System.Drawing.Size(120, 35)
+        Me.cmdNuevo.TabIndex = 61
+        Me.cmdNuevo.Text = "Nuevo"
+        Me.cmdNuevo.UseVisualStyleBackColor = True
+        '
+        'dtpHora
+        '
+        Me.dtpHora.Enabled = False
+        Me.dtpHora.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpHora.Location = New System.Drawing.Point(90, 132)
+        Me.dtpHora.Name = "dtpHora"
+        Me.dtpHora.Size = New System.Drawing.Size(268, 26)
+        Me.dtpHora.TabIndex = 64
+        '
+        'frmActividadPozos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -285,7 +285,7 @@ Partial Class frmActiidadPozos
         Me.Controls.Add(Me.lblCosto)
         Me.Controls.Add(Me.lblUnidadMedida)
         Me.Controls.Add(Me.txtidActividad)
-        Me.Name = "frmActiidadPozos"
+        Me.Name = "frmActividadPozos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registro de la Actividad de Pozos"
         CType(Me.dgActividadPozos, System.ComponentModel.ISupportInitialize).EndInit()

@@ -432,6 +432,7 @@ Partial Class frmGastosRealizados
         '
         'cmdGrabar
         '
+        Me.cmdGrabar.Enabled = False
         Me.cmdGrabar.Image = Global.PSAP.My.Resources.Resources.save
         Me.cmdGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.cmdGrabar.Location = New System.Drawing.Point(297, 496)

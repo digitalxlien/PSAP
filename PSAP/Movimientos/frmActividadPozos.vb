@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 
-Public Class frmActiidadPozos
+Public Class frmActividadPozos
 
     Dim conexion As New SqlConnection("Data source = DIGITALXLIEN-PC; Initial Catalog = 'BD_PSAP'; Integrated security = true")
     Dim auxIdPozo As Integer = -1
@@ -58,7 +58,7 @@ Public Class frmActiidadPozos
         txtObservaciones.Enabled = True
 
     End Sub
-    
+
     Private Sub cmdGrabar_Click(sender As Object, e As EventArgs) Handles cmdGrabar.Click
         'Variables para tabla ActividadPozo
         Dim idPozo As Integer = auxIdPozo

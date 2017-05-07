@@ -75,6 +75,30 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteCuentasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteCuentasPorCalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteCallesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteEmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteGastosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteTarifasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:PSAP.DataSeTPSAP.CalleRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -115,6 +139,30 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteCuentasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteCuentasPorCalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteCallesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteEmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteGastosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteTarifasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:PSAP.DataSeTPSAP.CalleRowChangeEvent">
 	<summary>
 Row event argument class
@@ -152,6 +200,30 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:PSAP.DataSeTPSAP.MaterialRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteCuentasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteCuentasPorCalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteCallesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteEmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteGastosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PSAP.DataSeTPSAP.ReporteTarifasRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -196,6 +268,30 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:PSAP.DataSeTPSAPTableAdapters.MaterialTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAPTableAdapters.ReporteCuentasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAPTableAdapters.ReporteCuentasPorCalleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAPTableAdapters.ReporteCallesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAPTableAdapters.ReporteEmpleadosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAPTableAdapters.ReporteGastosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PSAP.DataSeTPSAPTableAdapters.ReporteTarifasTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

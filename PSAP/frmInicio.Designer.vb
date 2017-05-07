@@ -50,13 +50,21 @@ Partial Class frmInicio
         Me.mniPagos = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniRegistrarPago = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniConsultarPagos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniReportes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniReportesCuentas = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniCuentasPorCalle = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniReporteCalles = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniReporteMaterialesExistencia = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniReporteEmpleados = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniReporteGastos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniReporteTarifas = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'mnsMenu
         '
         Me.mnsMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.mnsMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniArchivo, Me.mniCatalogos, Me.mniMovimientos})
+        Me.mnsMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniArchivo, Me.mniCatalogos, Me.mniMovimientos, Me.mniReportes})
         Me.mnsMenu.Location = New System.Drawing.Point(0, 0)
         Me.mnsMenu.Name = "mnsMenu"
         Me.mnsMenu.Size = New System.Drawing.Size(712, 24)
@@ -223,6 +231,55 @@ Partial Class frmInicio
         Me.mniConsultarPagos.Size = New System.Drawing.Size(160, 22)
         Me.mniConsultarPagos.Text = "Consultar Pagos"
         '
+        'mniReportes
+        '
+        Me.mniReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniReportesCuentas, Me.mniCuentasPorCalle, Me.mniReporteCalles, Me.mniReporteMaterialesExistencia, Me.mniReporteEmpleados, Me.mniReporteGastos, Me.mniReporteTarifas})
+        Me.mniReportes.Name = "mniReportes"
+        Me.mniReportes.Size = New System.Drawing.Size(65, 20)
+        Me.mniReportes.Text = "Reportes"
+        '
+        'mniReportesCuentas
+        '
+        Me.mniReportesCuentas.Name = "mniReportesCuentas"
+        Me.mniReportesCuentas.Size = New System.Drawing.Size(205, 22)
+        Me.mniReportesCuentas.Text = "Cuentas"
+        '
+        'mniCuentasPorCalle
+        '
+        Me.mniCuentasPorCalle.Name = "mniCuentasPorCalle"
+        Me.mniCuentasPorCalle.Size = New System.Drawing.Size(205, 22)
+        Me.mniCuentasPorCalle.Text = "Clientes por calle"
+        '
+        'mniReporteCalles
+        '
+        Me.mniReporteCalles.Name = "mniReporteCalles"
+        Me.mniReporteCalles.Size = New System.Drawing.Size(205, 22)
+        Me.mniReporteCalles.Text = "Calles"
+        '
+        'mniReporteMaterialesExistencia
+        '
+        Me.mniReporteMaterialesExistencia.Name = "mniReporteMaterialesExistencia"
+        Me.mniReporteMaterialesExistencia.Size = New System.Drawing.Size(205, 22)
+        Me.mniReporteMaterialesExistencia.Text = "Materiales con existencia"
+        '
+        'mniReporteEmpleados
+        '
+        Me.mniReporteEmpleados.Name = "mniReporteEmpleados"
+        Me.mniReporteEmpleados.Size = New System.Drawing.Size(205, 22)
+        Me.mniReporteEmpleados.Text = "Empleados"
+        '
+        'mniReporteGastos
+        '
+        Me.mniReporteGastos.Name = "mniReporteGastos"
+        Me.mniReporteGastos.Size = New System.Drawing.Size(205, 22)
+        Me.mniReporteGastos.Text = "Gastos"
+        '
+        'mniReporteTarifas
+        '
+        Me.mniReporteTarifas.Name = "mniReporteTarifas"
+        Me.mniReporteTarifas.Size = New System.Drawing.Size(205, 22)
+        Me.mniReporteTarifas.Text = "Tarifas"
+        '
         'frmInicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -269,4 +326,12 @@ Partial Class frmInicio
     Friend WithEvents mniPagos As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mniRegistrarPago As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mniConsultarPagos As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniReportes As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniReportesCuentas As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniCuentasPorCalle As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniReporteCalles As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniReporteMaterialesExistencia As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniReporteEmpleados As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniReporteGastos As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniReporteTarifas As System.Windows.Forms.ToolStripMenuItem
 End Class

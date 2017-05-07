@@ -47,6 +47,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -83,6 +85,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPSAP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmReportes.Designer.vb">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdlPrincipal.vb" />
     <Compile Include="Movimientos\frmConsultarDetallePagos.Designer.vb">
       <DependentUpon>frmConsultarDetallePagos.vb</DependentUpon>
     </Compile>
@@ -243,6 +252,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reportes\frmSeleccionarCalle.Designer.vb">
+      <DependentUpon>frmSeleccionarCalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmSeleccionarCalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Catalogos\frmCalles.resx">
@@ -259,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\frmMateriales.resx">
       <DependentUpon>frmMateriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\frmConsultarDetallePagos.resx">
       <DependentUpon>frmConsultarDetallePagos.vb</DependentUpon>
@@ -326,6 +344,15 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCalles.rdlc" />
+    <EmbeddedResource Include="ReporteCuentas.rdlc" />
+    <EmbeddedResource Include="ReporteGastos.rdlc" />
+    <EmbeddedResource Include="Reportes\frmSeleccionarCalle.resx">
+      <DependentUpon>frmSeleccionarCalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCuentasPorCalle.rdlc" />
+    <EmbeddedResource Include="ReporteEmpleados.rdlc" />
+    <EmbeddedResource Include="ReporteTarifas.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DataSetPSAP.xsc">

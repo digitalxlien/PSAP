@@ -1,4 +1,8 @@
-﻿Public Class frmInicio
+﻿Imports System.Data.SqlClient
+Imports Microsoft.Reporting.WinForms
+
+
+Public Class frmInicio
 
     Private Sub AcercaDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mniAcercaDe.Click
 
@@ -51,7 +55,7 @@
     End Sub
 
     Private Sub mniActividadPozos_Click(sender As Object, e As EventArgs) Handles mniActividadPozos.Click
-        frmActiidadPozos.ShowDialog()
+        frmActividadPozos.ShowDialog()
     End Sub
 
     Private Sub mniGastosRealizados_Click(sender As Object, e As EventArgs) Handles mniGastosRealizados.Click
@@ -81,5 +85,101 @@
 
     Private Sub mniConsultarPagos_Click(sender As Object, e As EventArgs) Handles mniConsultarPagos.Click
         frmConsultarPago.ShowDialog()
+    End Sub
+
+    Private Sub mniReportesClientes_Click(sender As Object, e As EventArgs) Handles mniReportesCuentas.Click
+        Dim conexion As New SqlConnection("Data source = DIGITALXLIEN-PC; Initial Catalog = 'BD_PSAP'; Integrated security = true")
+        Dim cmd As New SqlCommand("ReporteCuentas", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet()
+        adaptador.Fill(data)
+        data.DataSetName = "ReporteCuentas"
+        Dim reportes As New ReportDataSource("ReporteCuentas", data.Tables(0))
+        frmReportes.rvReportes.LocalReport.DataSources.Clear()
+        frmReportes.rvReportes.LocalReport.DataSources.Add(reportes)
+        frmReportes.rvReportes.LocalReport.ReportPath = directorioLocal & "ReporteCuentas.rdlc"
+        frmReportes.rvReportes.RefreshReport()
+        frmReportes.Show()
+        conexion.Close()
+    End Sub
+
+    Private Sub mniClientesPorCalle_Click(sender As Object, e As EventArgs) Handles mniCuentasPorCalle.Click
+        frmSeleccionarCalle.ShowDialog()
+    End Sub
+
+    Private Sub mniReporteCalles_Click(sender As Object, e As EventArgs) Handles mniReporteCalles.Click
+        Dim conexion As New SqlConnection("Data source = DIGITALXLIEN-PC; Initial Catalog = 'BD_PSAP'; Integrated security = true")
+        Dim cmd As New SqlCommand("ReporteCalles", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet()
+        adaptador.Fill(data)
+        data.DataSetName = "ReporteCalles"
+        Dim reportes As New ReportDataSource("ReporteCalles", data.Tables(0))
+        frmReportes.rvReportes.LocalReport.DataSources.Clear()
+        frmReportes.rvReportes.LocalReport.DataSources.Add(reportes)
+        frmReportes.rvReportes.LocalReport.ReportPath = directorioLocal & "ReporteCalles.rdlc"
+        frmReportes.rvReportes.RefreshReport()
+        frmReportes.Show()
+        conexion.Close()
+
+
+    End Sub
+
+    Private Sub mniReporteEmpleados_Click(sender As Object, e As EventArgs) Handles mniReporteEmpleados.Click
+
+        Dim conexion As New SqlConnection("Data source = DIGITALXLIEN-PC; Initial Catalog = 'BD_PSAP'; Integrated security = true")
+        Dim cmd As New SqlCommand("ReporteEmpleados", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet()
+        adaptador.Fill(data)
+        data.DataSetName = "ReporteEmpleados"
+        Dim reportes As New ReportDataSource("ReporteEmpleados", data.Tables(0))
+        frmReportes.rvReportes.LocalReport.DataSources.Clear()
+        frmReportes.rvReportes.LocalReport.DataSources.Add(reportes)
+        frmReportes.rvReportes.LocalReport.ReportPath = directorioLocal & "ReporteEmpleados.rdlc"
+        frmReportes.rvReportes.RefreshReport()
+        frmReportes.Show()
+        conexion.Close()
+
+
+    End Sub
+
+    Private Sub mniReporteGastos_Click(sender As Object, e As EventArgs) Handles mniReporteGastos.Click
+        Dim conexion As New SqlConnection("Data source = DIGITALXLIEN-PC; Initial Catalog = 'BD_PSAP'; Integrated security = true")
+        Dim cmd As New SqlCommand("ReporteGastos", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet()
+        adaptador.Fill(data)
+        data.DataSetName = "ReporteGastos"
+        Dim reportes As New ReportDataSource("ReporteGastos", data.Tables(0))
+        frmReportes.rvReportes.LocalReport.DataSources.Clear()
+        frmReportes.rvReportes.LocalReport.DataSources.Add(reportes)
+        frmReportes.rvReportes.LocalReport.ReportPath = directorioLocal & "ReporteGastos.rdlc"
+        frmReportes.rvReportes.RefreshReport()
+        frmReportes.Show()
+        conexion.Close()
+
+
+    End Sub
+
+    Private Sub mniReporteTarifas_Click(sender As Object, e As EventArgs) Handles mniReporteTarifas.Click
+        Dim conexion As New SqlConnection("Data source = DIGITALXLIEN-PC; Initial Catalog = 'BD_PSAP'; Integrated security = true")
+        Dim cmd As New SqlCommand("ReporteTarifas", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet()
+        adaptador.Fill(data)
+        data.DataSetName = "ReporteTarifas"
+        Dim reportes As New ReportDataSource("ReporteTarifas", data.Tables(0))
+        frmReportes.rvReportes.LocalReport.DataSources.Clear()
+        frmReportes.rvReportes.LocalReport.DataSources.Add(reportes)
+        frmReportes.rvReportes.LocalReport.ReportPath = directorioLocal & "ReporteTarifas.rdlc"
+        frmReportes.rvReportes.RefreshReport()
+        frmReportes.Show()
+        conexion.Close()
     End Sub
 End Class

@@ -84,8 +84,11 @@ Public Class frmGastosRealizados
         txtObservaciones.Enabled = True
 
         cmdNuevo.Enabled = False
-
+        cmdGrabar.Enabled = True
         lector.Close()
+
+
+
     End Sub
 
     Private Sub cmdGrabar_Click(sender As Object, e As EventArgs) Handles cmdGrabar.Click
@@ -98,7 +101,7 @@ Public Class frmGastosRealizados
         End If
 
         Dim sql As String = String.Format("INSERT INTO gastoRealizado (idGasto, idEmpleado, fecha, importe, observaciones) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');", aux_idGasto, aux_idEmpleado, fecha, importe, observaciones)
-        MessageBox.Show(sql)
+        'MessageBox.Show(sql)
 
 
         cmd.CommandText = sql
