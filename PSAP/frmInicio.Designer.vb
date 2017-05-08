@@ -58,6 +58,7 @@ Partial Class frmInicio
         Me.mniReporteEmpleados = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniReporteGastos = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniReporteTarifas = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniReportePozos = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -233,7 +234,7 @@ Partial Class frmInicio
         '
         'mniReportes
         '
-        Me.mniReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniReportesCuentas, Me.mniCuentasPorCalle, Me.mniReporteCalles, Me.mniReporteMaterialesExistencia, Me.mniReporteEmpleados, Me.mniReporteGastos, Me.mniReporteTarifas})
+        Me.mniReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniReportesCuentas, Me.mniCuentasPorCalle, Me.mniReporteCalles, Me.mniReporteMaterialesExistencia, Me.mniReporteEmpleados, Me.mniReporteGastos, Me.mniReporteTarifas, Me.mniReportePozos})
         Me.mniReportes.Name = "mniReportes"
         Me.mniReportes.Size = New System.Drawing.Size(65, 20)
         Me.mniReportes.Text = "Reportes"
@@ -279,6 +280,12 @@ Partial Class frmInicio
         Me.mniReporteTarifas.Name = "mniReporteTarifas"
         Me.mniReporteTarifas.Size = New System.Drawing.Size(205, 22)
         Me.mniReporteTarifas.Text = "Tarifas"
+        '
+        'mniReportePozos
+        '
+        Me.mniReportePozos.Name = "mniReportePozos"
+        Me.mniReportePozos.Size = New System.Drawing.Size(205, 22)
+        Me.mniReportePozos.Text = "Pozos"
         '
         'frmInicio
         '
@@ -334,4 +341,5 @@ Partial Class frmInicio
     Friend WithEvents mniReporteEmpleados As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mniReporteGastos As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mniReporteTarifas As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniReportePozos As System.Windows.Forms.ToolStripMenuItem
 End Class

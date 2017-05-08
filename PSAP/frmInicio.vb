@@ -199,4 +199,21 @@ Public Class frmInicio
         frmReportes.Show()
         conexion.Close()
     End Sub
+
+    Private Sub mniReportePozos_Click(sender As Object, e As EventArgs) Handles mniReportePozos.Click
+        Dim conexion As New SqlConnection("Data source = DIGITALXLIEN-PC; Initial Catalog = 'BD_PSAP'; Integrated security = true")
+        Dim cmd As New SqlCommand("ReportePozos", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet()
+        adaptador.Fill(data)
+        data.DataSetName = "ReportePozos"
+        Dim reportes As New ReportDataSource("ReportePozos", data.Tables(0))
+        frmReportes.rvReportes.LocalReport.DataSources.Clear()
+        frmReportes.rvReportes.LocalReport.DataSources.Add(reportes)
+        frmReportes.rvReportes.LocalReport.ReportPath = directorioLocal & "ReportePozos.rdlc"
+        frmReportes.rvReportes.RefreshReport()
+        frmReportes.Show()
+        conexion.Close()
+    End Sub
 End Class
