@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>id Material</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="idMaterial">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!idMaterial.Value)</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>idMaterial</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
+            </TablixMember>
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <TablixHeader>
+                <Size>2.5cm</Size>
+                <CellContents>
+                  <Textbox Name="Textbox17">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>ID de Material</Value>
+                            <Style />
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox17</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Color>LightGrey</Color>
+                        <Style>Solid</Style>
+                      </Border>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <TablixMembers>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>6.04542cm</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox19">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Descripción</Value>
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox19</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember>
+                      <TablixHeader>
+                        <Size>2.5cm</Size>
+                        <CellContents>
+                          <Textbox Name="Textbox13">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>Existencias</Value>
+                                    <Style />
+                                  </TextRun>
+                                </TextRuns>
+                                <Style />
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox13</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <TablixMembers>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>3.10854cm</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox11">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Unidad de Medida</Value>
+                                        <Style />
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox11</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember>
+                              <TablixHeader>
+                                <Size>2.5cm</Size>
+                                <CellContents>
+                                  <Textbox Name="Textbox9">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>Costo</Value>
+                                            <Style />
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>Textbox9</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>LightGrey</Color>
+                                        <Style>Solid</Style>
+                                      </Border>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixHeader>
+                              <TablixMembers>
+                                <TablixMember>
+                                  <TablixHeader>
+                                    <Size>2.5cm</Size>
+                                    <CellContents>
+                                      <Textbox Name="Textbox7">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Ultima Compra</Value>
+                                                <Style />
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox7</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixHeader>
+                                  <TablixMembers>
+                                    <TablixMember>
+                                      <TablixHeader>
+                                        <Size>2.5cm</Size>
+                                        <CellContents>
+                                          <Textbox Name="Textbox5">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Máximo</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox5</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>Solid</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixHeader>
+                                      <TablixMembers>
+                                        <TablixMember>
+                                          <TablixHeader>
+                                            <Size>2.5cm</Size>
+                                            <CellContents>
+                                              <Textbox Name="Textbox3">
+                                                <CanGrow>true</CanGrow>
+                                                <KeepTogether>true</KeepTogether>
+                                                <Paragraphs>
+                                                  <Paragraph>
+                                                    <TextRuns>
+                                                      <TextRun>
+                                                        <Value>Minimo</Value>
+                                                        <Style />
+                                                      </TextRun>
+                                                    </TextRuns>
+                                                    <Style />
+                                                  </Paragraph>
+                                                </Paragraphs>
+                                                <rd:DefaultName>Textbox3</rd:DefaultName>
+                                                <Style>
+                                                  <Border>
+                                                    <Color>LightGrey</Color>
+                                                    <Style>Solid</Style>
+                                                  </Border>
+                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                  <PaddingRight>2pt</PaddingRight>
+                                                  <PaddingTop>2pt</PaddingTop>
+                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                </Style>
+                                              </Textbox>
+                                            </CellContents>
+                                          </TablixHeader>
+                                          <TablixMembers>
+                                            <TablixMember />
+                                          </TablixMembers>
+                                        </TablixMember>
+                                      </TablixMembers>
+                                    </TablixMember>
+                                  </TablixMembers>
+                                </TablixMember>
+                              </TablixMembers>
+                            </TablixMember>
+                          </TablixMembers>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="idMaterial">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!idMaterial.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!idMaterial.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <TablixHeader>
+                <Size>2.5cm</Size>
+                <CellContents>
+                  <Textbox Name="idMaterial1">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Fields!idMaterial.Value</Value>
+                            <Style />
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>idMaterial1</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Color>LightGrey</Color>
+                        <Style>Solid</Style>
+                      </Border>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="descripcion">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!descripcion.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!descripcion.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>6.04542cm</Size>
+                    <CellContents>
+                      <Textbox Name="descripcion">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!descripcion.Value</Value>
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>descripcion</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="existencia">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!existencia.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Group>
+                      <SortExpressions>
+                        <SortExpression>
+                          <Value>=Fields!existencia.Value</Value>
+                        </SortExpression>
+                      </SortExpressions>
+                      <TablixHeader>
+                        <Size>2.5cm</Size>
+                        <CellContents>
+                          <Textbox Name="existencia">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>=Fields!existencia.Value</Value>
+                                    <Style />
+                                  </TextRun>
+                                </TextRuns>
+                                <Style />
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>existencia</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <TablixMembers>
+                        <TablixMember>
+                          <Group Name="unidadMedida">
+                            <GroupExpressions>
+                              <GroupExpression>=Fields!unidadMedida.Value</GroupExpression>
+                            </GroupExpressions>
+                          </Group>
+                          <SortExpressions>
+                            <SortExpression>
+                              <Value>=Fields!unidadMedida.Value</Value>
+                            </SortExpression>
+                          </SortExpressions>
+                          <TablixHeader>
+                            <Size>3.10854cm</Size>
+                            <CellContents>
+                              <Textbox Name="unidadMedida">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>=Fields!unidadMedida.Value</Value>
+                                        <Style />
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>unidadMedida</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember>
+                              <Group Name="costo">
+                                <GroupExpressions>
+                                  <GroupExpression>=Fields!costo.Value</GroupExpression>
+                                </GroupExpressions>
+                              </Group>
+                              <SortExpressions>
+                                <SortExpression>
+                                  <Value>=Fields!costo.Value</Value>
+                                </SortExpression>
+                              </SortExpressions>
+                              <TablixHeader>
+                                <Size>2.5cm</Size>
+                                <CellContents>
+                                  <Textbox Name="costo">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>=Fields!costo.Value</Value>
+                                            <Style>
+                                              <Format>'$'0.00;('$'0.00)</Format>
+                                              <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>costo</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>LightGrey</Color>
+                                        <Style>Solid</Style>
+                                      </Border>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                  <rd:Selected>true</rd:Selected>
+                                </CellContents>
+                              </TablixHeader>
+                              <TablixMembers>
+                                <TablixMember>
+                                  <Group Name="fechaUltimaCompra">
+                                    <GroupExpressions>
+                                      <GroupExpression>=Fields!fechaUltimaCompra.Value</GroupExpression>
+                                    </GroupExpressions>
+                                  </Group>
+                                  <SortExpressions>
+                                    <SortExpression>
+                                      <Value>=Fields!fechaUltimaCompra.Value</Value>
+                                    </SortExpression>
+                                  </SortExpressions>
+                                  <TablixHeader>
+                                    <Size>2.5cm</Size>
+                                    <CellContents>
+                                      <Textbox Name="fechaUltimaCompra">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!fechaUltimaCompra.Value</Value>
+                                                <Style>
+                                                  <Format>d</Format>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>fechaUltimaCompra</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixHeader>
+                                  <TablixMembers>
+                                    <TablixMember>
+                                      <Group Name="maximo">
+                                        <GroupExpressions>
+                                          <GroupExpression>=Fields!maximo.Value</GroupExpression>
+                                        </GroupExpressions>
+                                      </Group>
+                                      <SortExpressions>
+                                        <SortExpression>
+                                          <Value>=Fields!maximo.Value</Value>
+                                        </SortExpression>
+                                      </SortExpressions>
+                                      <TablixHeader>
+                                        <Size>2.5cm</Size>
+                                        <CellContents>
+                                          <Textbox Name="maximo">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Fields!maximo.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>maximo</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>Solid</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixHeader>
+                                      <TablixMembers>
+                                        <TablixMember>
+                                          <Group Name="minimo">
+                                            <GroupExpressions>
+                                              <GroupExpression>=Fields!minimo.Value</GroupExpression>
+                                            </GroupExpressions>
+                                          </Group>
+                                          <SortExpressions>
+                                            <SortExpression>
+                                              <Value>=Fields!minimo.Value</Value>
+                                            </SortExpression>
+                                          </SortExpressions>
+                                          <TablixHeader>
+                                            <Size>2.5cm</Size>
+                                            <CellContents>
+                                              <Textbox Name="minimo">
+                                                <CanGrow>true</CanGrow>
+                                                <KeepTogether>true</KeepTogether>
+                                                <Paragraphs>
+                                                  <Paragraph>
+                                                    <TextRuns>
+                                                      <TextRun>
+                                                        <Value>=Fields!minimo.Value</Value>
+                                                        <Style />
+                                                      </TextRun>
+                                                    </TextRuns>
+                                                    <Style />
+                                                  </Paragraph>
+                                                </Paragraphs>
+                                                <rd:DefaultName>minimo</rd:DefaultName>
+                                                <Style>
+                                                  <Border>
+                                                    <Color>LightGrey</Color>
+                                                    <Style>Solid</Style>
+                                                  </Border>
+                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                  <PaddingRight>2pt</PaddingRight>
+                                                  <PaddingTop>2pt</PaddingTop>
+                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                </Style>
+                                              </Textbox>
+                                            </CellContents>
+                                          </TablixHeader>
+                                          <TablixMembers>
+                                            <TablixMember />
+                                          </TablixMembers>
+                                        </TablixMember>
+                                      </TablixMembers>
+                                    </TablixMember>
+                                  </TablixMembers>
+                                </TablixMember>
+                              </TablixMembers>
+                            </TablixMember>
+                          </TablixMembers>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>ReporteMateriales</DataSetName>
+        <Height>1.2cm</Height>
+        <Width>26.65396cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>2in</Height>
+    <Style />
+  </Body>
+  <Width>10.49368in</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSeTPSAP">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>38ae46f2-ff8d-449a-87d7-63f01486418c</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="ReporteMateriales">
+      <Query>
+        <DataSourceName>DataSeTPSAP</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="idMaterial">
+          <DataField>idMaterial</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="descripcion">
+          <DataField>descripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="existencia">
+          <DataField>existencia</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="unidadMedida">
+          <DataField>unidadMedida</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="costo">
+          <DataField>costo</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="fechaUltimaCompra">
+          <DataField>fechaUltimaCompra</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="maximo">
+          <DataField>maximo</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="minimo">
+          <DataField>minimo</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSeTPSAP</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potable - PSAP\PSAP\PSAP\DataSetPSAP.xsd</rd:SchemaPath>
+        <rd:TableName>ReporteMateriales</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>ReporteMaterialesTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>8134ab8a-7a0a-4aa0-a0a5-87c06bbc08bd</rd:ReportID>
+</Report>

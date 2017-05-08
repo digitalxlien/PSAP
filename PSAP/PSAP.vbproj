@@ -347,6 +347,7 @@
     <EmbeddedResource Include="ReporteCalles.rdlc" />
     <EmbeddedResource Include="ReporteCuentas.rdlc" />
     <EmbeddedResource Include="ReporteGastos.rdlc" />
+    <EmbeddedResource Include="ReporteMateriales.rdlc" />
     <EmbeddedResource Include="Reportes\frmSeleccionarCalle.resx">
       <DependentUpon>frmSeleccionarCalle.vb</DependentUpon>
     </EmbeddedResource>
