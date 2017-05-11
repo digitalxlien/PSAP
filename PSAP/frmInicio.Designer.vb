@@ -61,6 +61,7 @@ Partial Class frmInicio
         Me.mniReportePozos = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniProveedores = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServiciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniReporteHistorialCuenta = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -236,7 +237,7 @@ Partial Class frmInicio
         '
         'mniReportes
         '
-        Me.mniReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniReportesCuentas, Me.mniCuentasPorCalle, Me.mniReporteCalles, Me.mniReporteMaterialesExistencia, Me.mniReporteEmpleados, Me.mniReporteGastos, Me.mniReporteTarifas, Me.mniReportePozos, Me.mniProveedores, Me.ServiciosToolStripMenuItem})
+        Me.mniReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniReportesCuentas, Me.mniCuentasPorCalle, Me.mniReporteCalles, Me.mniReporteMaterialesExistencia, Me.mniReporteEmpleados, Me.mniReporteGastos, Me.mniReporteTarifas, Me.mniReportePozos, Me.mniProveedores, Me.ServiciosToolStripMenuItem, Me.mniReporteHistorialCuenta})
         Me.mniReportes.Name = "mniReportes"
         Me.mniReportes.Size = New System.Drawing.Size(65, 20)
         Me.mniReportes.Text = "Reportes"
@@ -244,62 +245,68 @@ Partial Class frmInicio
         'mniReportesCuentas
         '
         Me.mniReportesCuentas.Name = "mniReportesCuentas"
-        Me.mniReportesCuentas.Size = New System.Drawing.Size(205, 22)
+        Me.mniReportesCuentas.Size = New System.Drawing.Size(229, 22)
         Me.mniReportesCuentas.Text = "Cuentas"
         '
         'mniCuentasPorCalle
         '
         Me.mniCuentasPorCalle.Name = "mniCuentasPorCalle"
-        Me.mniCuentasPorCalle.Size = New System.Drawing.Size(205, 22)
+        Me.mniCuentasPorCalle.Size = New System.Drawing.Size(229, 22)
         Me.mniCuentasPorCalle.Text = "Clientes por calle"
         '
         'mniReporteCalles
         '
         Me.mniReporteCalles.Name = "mniReporteCalles"
-        Me.mniReporteCalles.Size = New System.Drawing.Size(205, 22)
+        Me.mniReporteCalles.Size = New System.Drawing.Size(229, 22)
         Me.mniReporteCalles.Text = "Calles"
         '
         'mniReporteMaterialesExistencia
         '
         Me.mniReporteMaterialesExistencia.Name = "mniReporteMaterialesExistencia"
-        Me.mniReporteMaterialesExistencia.Size = New System.Drawing.Size(205, 22)
+        Me.mniReporteMaterialesExistencia.Size = New System.Drawing.Size(229, 22)
         Me.mniReporteMaterialesExistencia.Text = "Materiales con existencia"
         '
         'mniReporteEmpleados
         '
         Me.mniReporteEmpleados.Name = "mniReporteEmpleados"
-        Me.mniReporteEmpleados.Size = New System.Drawing.Size(205, 22)
+        Me.mniReporteEmpleados.Size = New System.Drawing.Size(229, 22)
         Me.mniReporteEmpleados.Text = "Empleados"
         '
         'mniReporteGastos
         '
         Me.mniReporteGastos.Name = "mniReporteGastos"
-        Me.mniReporteGastos.Size = New System.Drawing.Size(205, 22)
+        Me.mniReporteGastos.Size = New System.Drawing.Size(229, 22)
         Me.mniReporteGastos.Text = "Gastos"
         '
         'mniReporteTarifas
         '
         Me.mniReporteTarifas.Name = "mniReporteTarifas"
-        Me.mniReporteTarifas.Size = New System.Drawing.Size(205, 22)
+        Me.mniReporteTarifas.Size = New System.Drawing.Size(229, 22)
         Me.mniReporteTarifas.Text = "Tarifas"
         '
         'mniReportePozos
         '
         Me.mniReportePozos.Name = "mniReportePozos"
-        Me.mniReportePozos.Size = New System.Drawing.Size(205, 22)
+        Me.mniReportePozos.Size = New System.Drawing.Size(229, 22)
         Me.mniReportePozos.Text = "Pozos"
         '
         'mniProveedores
         '
         Me.mniProveedores.Name = "mniProveedores"
-        Me.mniProveedores.Size = New System.Drawing.Size(205, 22)
+        Me.mniProveedores.Size = New System.Drawing.Size(229, 22)
         Me.mniProveedores.Text = "Proveedores"
         '
         'ServiciosToolStripMenuItem
         '
         Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
-        Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
         Me.ServiciosToolStripMenuItem.Text = "Servicios"
+        '
+        'mniReporteHistorialCuenta
+        '
+        Me.mniReporteHistorialCuenta.Name = "mniReporteHistorialCuenta"
+        Me.mniReporteHistorialCuenta.Size = New System.Drawing.Size(229, 22)
+        Me.mniReporteHistorialCuenta.Text = "Historial de pagos por cuenta"
         '
         'frmInicio
         '
@@ -358,4 +365,5 @@ Partial Class frmInicio
     Friend WithEvents mniReportePozos As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mniProveedores As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ServiciosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniReporteHistorialCuenta As System.Windows.Forms.ToolStripMenuItem
 End Class

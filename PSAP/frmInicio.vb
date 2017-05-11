@@ -250,4 +250,8 @@ Public Class frmInicio
         frmReportes.Show()
         conexion.Close()
     End Sub
+
+    Private Sub HistorialDePagosPorCuentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mniReporteHistorialCuenta.Click
+        frmSeleccionarCuenta.ShowDialog()
+    End Sub
 End Class

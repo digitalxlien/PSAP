@@ -91,6 +91,12 @@
     <Compile Include="frmReportes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\frmSeleccionarCuenta.Designer.vb">
+      <DependentUpon>frmSeleccionarCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmSeleccionarCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mdlPrincipal.vb" />
     <Compile Include="Movimientos\frmConsultarDetallePagos.Designer.vb">
       <DependentUpon>frmConsultarDetallePagos.vb</DependentUpon>
@@ -278,6 +284,9 @@
     <EmbeddedResource Include="frmReportes.resx">
       <DependentUpon>frmReportes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmSeleccionarCuenta.resx">
+      <DependentUpon>frmSeleccionarCuenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\frmConsultarDetallePagos.resx">
       <DependentUpon>frmConsultarDetallePagos.vb</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +365,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteCuentasPorCalle.rdlc" />
     <EmbeddedResource Include="ReporteEmpleados.rdlc" />
+    <EmbeddedResource Include="ReporteHistorialCuenta.rdlc" />
     <EmbeddedResource Include="ReporteTarifas.rdlc" />
   </ItemGroup>
   <ItemGroup>

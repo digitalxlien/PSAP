@@ -79,3 +79,4 @@ C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potabl
 C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potable - PSAP\PSAP\PSAP\obj\Debug\RdlCompile.compiled
 C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potable - PSAP\PSAP\PSAP\obj\Debug\PSAP.frmSeleccionarCalle.resources
 C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potable - PSAP\PSAP\PSAP\obj\Debug\PSAP.frmActividadPozos.resources
+C:\Users\DigitalXlien\Desktop\XLIEN\Sistema de Pagos  y Servicios de Agua Potable - PSAP\PSAP\PSAP\obj\Debug\PSAP.frmSeleccionarCuenta.resources
