@@ -611,7 +611,9 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>=Fields!fechaAlta.Value</Value>
-                                                <Style />
+                                                <Style>
+                                                  <Format>dd/MM/yyyy</Format>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style />
