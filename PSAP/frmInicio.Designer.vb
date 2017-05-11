@@ -60,6 +60,7 @@ Partial Class frmInicio
         Me.mniReporteTarifas = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniReportePozos = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniProveedores = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ServiciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -235,7 +236,7 @@ Partial Class frmInicio
         '
         'mniReportes
         '
-        Me.mniReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniReportesCuentas, Me.mniCuentasPorCalle, Me.mniReporteCalles, Me.mniReporteMaterialesExistencia, Me.mniReporteEmpleados, Me.mniReporteGastos, Me.mniReporteTarifas, Me.mniReportePozos, Me.mniProveedores})
+        Me.mniReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniReportesCuentas, Me.mniCuentasPorCalle, Me.mniReporteCalles, Me.mniReporteMaterialesExistencia, Me.mniReporteEmpleados, Me.mniReporteGastos, Me.mniReporteTarifas, Me.mniReportePozos, Me.mniProveedores, Me.ServiciosToolStripMenuItem})
         Me.mniReportes.Name = "mniReportes"
         Me.mniReportes.Size = New System.Drawing.Size(65, 20)
         Me.mniReportes.Text = "Reportes"
@@ -294,6 +295,12 @@ Partial Class frmInicio
         Me.mniProveedores.Size = New System.Drawing.Size(205, 22)
         Me.mniProveedores.Text = "Proveedores"
         '
+        'ServiciosToolStripMenuItem
+        '
+        Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
+        Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.ServiciosToolStripMenuItem.Text = "Servicios"
+        '
         'frmInicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -350,4 +357,5 @@ Partial Class frmInicio
     Friend WithEvents mniReporteTarifas As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mniReportePozos As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mniProveedores As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ServiciosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
