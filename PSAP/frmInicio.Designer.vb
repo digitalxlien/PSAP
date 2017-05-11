@@ -59,6 +59,7 @@ Partial Class frmInicio
         Me.mniReporteGastos = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniReporteTarifas = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniReportePozos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniProveedores = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -234,7 +235,7 @@ Partial Class frmInicio
         '
         'mniReportes
         '
-        Me.mniReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniReportesCuentas, Me.mniCuentasPorCalle, Me.mniReporteCalles, Me.mniReporteMaterialesExistencia, Me.mniReporteEmpleados, Me.mniReporteGastos, Me.mniReporteTarifas, Me.mniReportePozos})
+        Me.mniReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniReportesCuentas, Me.mniCuentasPorCalle, Me.mniReporteCalles, Me.mniReporteMaterialesExistencia, Me.mniReporteEmpleados, Me.mniReporteGastos, Me.mniReporteTarifas, Me.mniReportePozos, Me.mniProveedores})
         Me.mniReportes.Name = "mniReportes"
         Me.mniReportes.Size = New System.Drawing.Size(65, 20)
         Me.mniReportes.Text = "Reportes"
@@ -286,6 +287,12 @@ Partial Class frmInicio
         Me.mniReportePozos.Name = "mniReportePozos"
         Me.mniReportePozos.Size = New System.Drawing.Size(205, 22)
         Me.mniReportePozos.Text = "Pozos"
+        '
+        'mniProveedores
+        '
+        Me.mniProveedores.Name = "mniProveedores"
+        Me.mniProveedores.Size = New System.Drawing.Size(205, 22)
+        Me.mniProveedores.Text = "Proveedores"
         '
         'frmInicio
         '
@@ -342,4 +349,5 @@ Partial Class frmInicio
     Friend WithEvents mniReporteGastos As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mniReporteTarifas As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mniReportePozos As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mniProveedores As System.Windows.Forms.ToolStripMenuItem
 End Class

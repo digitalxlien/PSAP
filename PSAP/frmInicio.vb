@@ -216,4 +216,21 @@ Public Class frmInicio
         frmReportes.Show()
         conexion.Close()
     End Sub
+
+    Private Sub mniProveedores_Click(sender As Object, e As EventArgs) Handles mniProveedores.Click
+        Dim conexion As New SqlConnection("Data source = DIGITALXLIEN-PC; Initial Catalog = 'BD_PSAP'; Integrated security = true")
+        Dim cmd As New SqlCommand("ReporteProveedores", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet()
+        adaptador.Fill(data)
+        data.DataSetName = "ReporteProveedores"
+        Dim reportes As New ReportDataSource("ReporteProveedores", data.Tables(0))
+        frmReportes.rvReportes.LocalReport.DataSources.Clear()
+        frmReportes.rvReportes.LocalReport.DataSources.Add(reportes)
+        frmReportes.rvReportes.LocalReport.ReportPath = directorioLocal & "ReporteProveedores.rdlc"
+        frmReportes.rvReportes.RefreshReport()
+        frmReportes.Show()
+        conexion.Close()
+    End Sub
 End Class
